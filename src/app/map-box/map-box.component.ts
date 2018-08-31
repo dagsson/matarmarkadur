@@ -44,20 +44,33 @@ export class MapBoxComponent implements OnInit {
     });
 
     map.on('load', (event) => {
-      map.addLayer({
-        id: 'locations',
-        type: 'symbol',
-        source: {
-          type: 'geojson',
-          data: FARMS
-        },
-        layout: {
-          'icon-image': 'restaurant-15',
-          'icon-allow-overlap': true
-      }
+      map.addSource('farms', {
+        type: 'geojson',
+        data: FARMS
       });
 
-      
+      FARMS.features.forEach(function(marker) {
+        var el = document.createElement('div');
+        el.className = 'marker';
+        new mapboxgl.Marker(el, { offset: [0, -23] })
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
+          el.addEventListener('click', function(e) {
+            var activeItem = document.getElementsByClassName('active');
+            // 1. Fly to the point
+            flyToStore(marker);
+            // 2. Close all other popups and display popup for clicked store
+            createPopUp(marker);
+            // 3. Highlight listing in sidebar (and remove highlight for all other listings)
+            e.stopPropagation();
+            if (activeItem[0]) {
+              activeItem[0].classList.remove('active');
+            }
+            var listing = document.getElementById('listing-' + i);
+            console.log(listing);
+            listing.classList.add('active');
+          });
+      });
 
       buildLocationList(FARMS);
 
@@ -77,23 +90,17 @@ export class MapBoxComponent implements OnInit {
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.address;
           link.addEventListener('click', function(e) {
-            // Update the currentFeature to the store associated with the clicked link
             var clickedListing = data.features[this.dataPosition];
-            // 1. Fly to the point associated with the clicked link
             flyToStore(clickedListing);
-            // 2. Close all other popups and display popup for clicked store
             createPopUp(clickedListing);
-            // 3. Highlight listing in sidebar (and remove highlight for all other listings)
             var activeItem = document.getElementsByClassName('active');
             if (activeItem[0]) {
               activeItem[0].classList.remove('active');
             }
-            this.parentNode.classList.add('active');
+            this.parentNode.classList.add('active');       
           });
         }
       }
-
-      
 
       function flyToStore(currentFeature) {
         map.flyTo({
@@ -104,7 +111,6 @@ export class MapBoxComponent implements OnInit {
       
       function createPopUp(currentFeature) {
         var popUps = document.getElementsByClassName('mapboxgl-popup');
-        // Check if there is already a popup on the map and if so, remove it
         if (popUps[0]) popUps[0].remove();
       
         var popup = new mapboxgl.Popup({ closeOnClick: false })
@@ -114,38 +120,7 @@ export class MapBoxComponent implements OnInit {
           .addTo(map);
       }
 
-      map.on('click', function(e) {
-        // Query all the rendered points in the view
-        var features = map.queryRenderedFeatures(e.point, { layers: ['locations'] });
-        if (features.length) {
-          var clickedPoint = features[0];
-          // 1. Fly to the point
-          flyToStore(clickedPoint);
-          // 2. Close all other popups and display popup for clicked store
-          createPopUp(clickedPoint);
-          // 3. Highlight listing in sidebar (and remove highlight for all other listings)
-          var activeItem = document.getElementsByClassName('active');
-          if (activeItem[0]) {
-            activeItem[0].classList.remove('active');
-          }
-          // Find the index of the store.features that corresponds to the clickedPoint that fired the event listener
-          var selectedFeature = clickedPoint.properties.address;
-      
-          for (var i = 0; i < FARMS.features.length; i++) {
-            if (FARMS.features[i].properties.address === selectedFeature) {
-              selectedFeatureIndex = i;
-            }
-          }
-          // Select the correct list item using the found index and add the active class
-          var listing = document.getElementById('listing-' + selectedFeatureIndex);
-          listing.classList.add('active');
-        }
-      });
-      
-
-     }
-
-     
+     }     
 
   )};
 
