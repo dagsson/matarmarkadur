@@ -76,7 +76,7 @@ export class MapBoxComponent implements OnInit {
       });
 
       buildLocationList(FARMS);
-      
+
       function buildLocationList(data) {
         for (var i = 0; i < data.features.length; i++) {
           var currentFeature = data.features[i];
@@ -121,7 +121,7 @@ export class MapBoxComponent implements OnInit {
           .setHTML('<h3>' + currentFeature.properties.address + '</h3>' +
             '<h4 class="product">' + currentFeature.properties.products + '</h4>' +
             '<h4>' + currentFeature.properties.name + '</h4>' +
-            '<div id="panta">Panta vöru</div>'
+            '<div id="panta">Skoða framleiðanda</div>'
           )
           .addTo(map);
           var order = document.getElementById('panta');
