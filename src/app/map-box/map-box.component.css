@@ -189,3 +189,7 @@
     color: white;
     text-align: center;
   }
+
+  #pant {
+    display: none;
+  }

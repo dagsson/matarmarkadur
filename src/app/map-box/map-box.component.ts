@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import { MapService } from '../map.service';
+import { Router } from '@angular/router';
 import { GeoJson, FeatureCollection } from '../map';
 import { FARMS } from '../mock-farms';
 
@@ -15,16 +16,14 @@ export class MapBoxComponent implements OnInit {
   style = 'mapbox://styles/dagsson/cjlf8cgng2ma92qudfeqd8yjp';
   lat = 65.800009;
   lng = -19.018391;
-  maxBounds = [
-    [65.500009, -19.918391], // Southwest coordinates
-    [66.200009, -19.618391]  // Northeast coordinates
-];
+  router: Router;
 
   // data
   source: any;
   markers: any;
 
-  constructor(private mapService: MapService) { }
+  constructor(private mapService: MapService, private _router: Router) { 
+  }
 
   ngOnInit() {
     this.initializeMap()
@@ -77,7 +76,7 @@ export class MapBoxComponent implements OnInit {
       });
 
       buildLocationList(FARMS);
-
+      
       function buildLocationList(data) {
         for (var i = 0; i < data.features.length; i++) {
           var currentFeature = data.features[i];
@@ -87,7 +86,7 @@ export class MapBoxComponent implements OnInit {
           listing.className = 'item';
           listing.id = 'listing-' + i;
           var link = listing.appendChild(document.createElement('a'));
-          link.href = '#';
+          //link.href = '#';
           link.className = 'title';
           link.dataPosition = i;
           link.innerHTML = prop.id;
@@ -127,7 +126,7 @@ export class MapBoxComponent implements OnInit {
           .addTo(map);
           var order = document.getElementById('panta');
           order.addEventListener('click', function(e) {
-            console.log('je beibí');
+            document.getElementById("pant").click();
           });
       }
 

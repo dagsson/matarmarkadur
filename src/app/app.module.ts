@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MapBoxComponent } from './map-box/map-box.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { FarmComponent } from './farm/farm.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapBoxComponent
+    MapBoxComponent,
+    FarmComponent
   ],
   imports: [
     BrowserModule,
