@@ -1,0 +1,10 @@
+<div *ngIf="farm">
+  <h2>{{farm.properties.name | uppercase}}</h2>
+  <div><span>id: </span>{{hero.address}}</div>
+  <div>
+    <label>name:
+      <input placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

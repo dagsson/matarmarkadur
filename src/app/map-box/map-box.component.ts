@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import { MapService } from '../map.service';
-import { Router } from '@angular/router';
 import { GeoJson, FeatureCollection } from '../map';
 import { FARMS } from '../mock-farms';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-map-box',
@@ -16,13 +16,12 @@ export class MapBoxComponent implements OnInit {
   style = 'mapbox://styles/dagsson/cjlf8cgng2ma92qudfeqd8yjp';
   lat = 65.800009;
   lng = -19.018391;
-  router: Router;
 
   // data
   source: any;
   markers: any;
 
-  constructor(private mapService: MapService, private _router: Router) { 
+  constructor(private mapService: MapService, private router: Router) { 
   }
 
   ngOnInit() {
@@ -40,6 +39,8 @@ export class MapBoxComponent implements OnInit {
       zoom: 7.8,
       center: [this.lng, this.lat]
     });
+
+    var router = this.router;
 
     map.on('load', (event) => {
       map.addSource('farms', {
@@ -81,10 +82,10 @@ export class MapBoxComponent implements OnInit {
           listing.className = 'item';
           listing.id = 'listing-' + i;
           var link = listing.appendChild(document.createElement('a'));
-          link.href = '#';
+          //link.href = '#';
           link.className = 'title';
           link.dataPosition = i;
-          link.innerHTML = prop.id;
+          link.innerHTML = prop.name;
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.address;
           link.addEventListener('click', function(e) {
@@ -107,7 +108,7 @@ export class MapBoxComponent implements OnInit {
         });
       }
       
-      function createPopUp(currentFeature) {
+      function createPopUp(currentFeature) { 
         var popUps = document.getElementsByClassName('mapboxgl-popup');
         if (popUps[0]) popUps[0].remove();
         var popup = new mapboxgl.Popup({ closeOnClick: false })
@@ -115,13 +116,12 @@ export class MapBoxComponent implements OnInit {
           .setHTML('<h3>' + currentFeature.properties.address + '</h3>' +
             '<h4 class="product">' + currentFeature.properties.products + '</h4>' +
             '<h4>' + currentFeature.properties.name + '</h4>' +
-            '<div id="panta">' + currentFeature.properties.id + '</div>'
+            '<div id="panta">Skoða framleiðanda</div>'
           )
           .addTo(map);
-          var order = document.getElementById('panta');
+          var order = document.getElementById('panta');    
           order.addEventListener('click', function(e) {
-            console.log(e.target);
-            document.getElementById("pant").click();
+            router.navigate(['/farm/' + currentFeature.properties.id + '']);
           });
       }
      }     

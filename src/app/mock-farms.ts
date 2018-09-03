@@ -11,10 +11,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-              "id": "Smáragrund 13",
+              "id": 1,
+              "name": "Smáragrund 13",
               "latitude": 65.74521667,
               "longitude": -19.63595,
-              "name": "Ásta Búadóttir",
+              "producer": "Ásta Búadóttir",
               "phone": "8663974",
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
@@ -32,10 +33,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-               "id": "Hulduland í Hegranesi",
+              "id": 2,
+               "name": "Hulduland í Hegranesi",
                "latitude": 65.74913333,
                "longitude": -19.6484,
-               "name": "Pálmi Jónsson og María Eymundsdóttir",
+               "producer": "Pálmi Jónsson og María Eymundsdóttir",
                "phone": "8973580, 8474217",
                "address": "Skagfirðingabraut 7, Sauðarkróki - Hulduland í Hegranesi",
                "zip": 550,
@@ -53,10 +55,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Kokkhús Hólum í Hjaltadal",
+            "id": 3,
+            "name": "Kokkhús Hólum í Hjaltadal",
             "latitude": 65.73645,
             "longitude": -19.65171667,
-            "name": "Þórhildur M Jónsdóttir",
+            "producer": "Þórhildur M Jónsdóttir",
             "phone": "8636355",
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
@@ -74,10 +77,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Pura Natura",
+            "4": 4,
+            "name": "Pura Natura",
             "latitude": 65.67023333,
             "longitude": -19.44495,
-            "name": "Hildur Magnúsdóttir og Halldór B Gunnlaugsson",
+            "producer": "Hildur Magnúsdóttir og Halldór B Gunnlaugsson",
             "phone": "8233231, 8993232",
             "address": "Pura Natura, Ríp 3, Sauðárkróki",
             "zip": 551,
@@ -95,10 +99,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Keldudal",
+            "id": 5,
+            "name": "Keldudal",
             "latitude": 65.6625,
             "longitude": -19.47656667,
-            "name": "Þórarinn Leifsson og Guðrún Lárusdóttir",
+            "producer": "Þórarinn Leifsson og Guðrún Lárusdóttir",
             "phone": "8936231, 8468185",
             "address": "Keldudal, Sauðárkróki",
             "zip": 551,
@@ -115,11 +120,12 @@ export const FARMS = {
                 65.68588333
               ]
             },
+            "id": 6,
             "properties": {
-            "id": "Birkihlíð",
+            "name": "Birkihlíð",
             "latitude": 65.68588333,
             "longitude": -19.61038333,
-            "name": "Þröstur Heiðar Erlingsson og Ragnheiður",
+            "producer": "Þröstur Heiðar Erlingsson og Ragnheiður",
             "phone": "6905528",
             "address": "Birkihlíð, Staðahreppur, Sauðárkróki",
             "zip": 551,
@@ -137,10 +143,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Laugarmýri",
+            "id": 7,
+            "name": "Laugarmýri",
             "latitude": 65.46558333,
             "longitude": -19.35095,
-            "name": "Dagný Stefánsdóttir og Róbert Logi Jóhannesson",
+            "producer": "Dagný Stefánsdóttir og Róbert Logi Jóhannesson",
             "phone": "8670247, 8988117",
             "address": "Laugarmýri, Varmahlíð",
             "zip": 561,
@@ -157,11 +164,12 @@ export const FARMS = {
                 65.58738333
               ]
             },
+            "id": 8,
             "properties": {
-            "id": "Syðra-Skörðugili",
+            "name": "Syðra-Skörðugili",
             "latitude": 65.58738333,
             "longitude": -19.49953333,
-            "name": "Einar Eðvald Einarsson og Sólborg Una Pálsdóttir",
+            "producer": "Einar Eðvald Einarsson og Sólborg Una Pálsdóttir",
             "phone": "8921137, 4538101",
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
@@ -179,10 +187,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Breiðargerði",
+            "id": 9,
+            "name": "Breiðargerði",
             "latitude": 65.36945,
             "longitude": -19.18108333,
-            "name": "Elínborg Erla Ásgeirsdóttir",
+            "producer": "Elínborg Erla Ásgeirsdóttir",
             "phone": "8452828",
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
@@ -199,11 +208,12 @@ export const FARMS = {
                 65.43296667
               ]
             },
+            "id": 10,
             "properties": {
-            "id": "Starrastöðum",
+            "name": "Starrastöðum",
             "latitude": 65.43296667,
             "longitude": -19.3327,
-            "name": "María Reykdal",
+            "producer": "María Reykdal",
             "phone": "8636039",
             "address": "Starrastöðum, Varmahlíð",
             "zip": 561,
@@ -221,10 +231,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Þverá",
+            "id": 11,
+            "name": "Þverá",
             "latitude": 65.62493333,
             "longitude": -19.37578333,
-            "name": "Ólöf Ólafsdóttir",
+            "producer": "Ólöf Ólafsdóttir",
             "phone": "8220264",
             "address": "Þverá, Varmahlíð",
             "zip": 561,
@@ -242,10 +253,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Sölvanesi",
+            "id": 12,
+            "name": "Sölvanesi",
             "latitude": 65.38723333,
             "longitude": -19.24831667,
-            "name": "Rúnar Máni Gunnarsson og Eydís Magnúsdóttir",
+            "producer": "Rúnar Máni Gunnarsson og Eydís Magnúsdóttir",
             "phone": "8978068, 8918076",
             "address": "Sölvanesi, Varmahlíð",
             "zip": 561,
@@ -263,10 +275,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Stórhóll",
+            "id": 13,
+            "name": "Stórhóll",
             "latitude": 65.41078333,
             "longitude": -19.27126667,
-            "name": "Sigrun Helga Indridadottir",
+            "producer": "Sigrun Helga Indrnameadottir",
             "phone": "8232441",
             "address": "Stórhóll, Lýtingstaðahreppi, Varmahlíð",
             "zip": 561,
@@ -284,10 +297,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Tjörnum",
+            "id": 14,
+            "name": "Tjörnum",
             "latitude": 66.01206667,
             "longitude": -19.38921667,
-            "name": "Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir",
+            "producer": "Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir",
             "phone": "8495130",
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
@@ -305,10 +319,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Lónkoti",
+            "id": 15,
+            "name": "Lónkoti",
             "latitude": 65.89618333,
             "longitude": -19.40191667,
-            "name": "Þorgils Pálsson, Hjálmar Höskuldur Hjálmarsson, Sigurjón",
+            "producer": "Þorgils Pálsson, Hjálmar Höskuldur Hjálmarsson, Sigurjón",
             "phone": "8480291 (ÞP), 8935727 (HH)",
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
@@ -326,10 +341,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Molastaðir",
+            "id": 16,
+            "name": "Molastaðir",
             "latitude": 66.02823333,
             "longitude": -19.01241667,
-            "name": "María Þ Númadóttir og Halldór G Hálfdánarson",
+            "producer": "María Þ Númadóttir og Halldór G Hálfdánarson",
             "phone": "8672035, 8963106, 4671021",
             "address": "Molastaðir, Fljótum",
             "zip": 570,
@@ -347,10 +363,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Brúnastöðum",
+            "id": 17,
+            "name": "Brúnastöðum",
             "latitude": 66.05541667,
             "longitude": -19.02241667,
-            "name": "Stefanía Hjördís Leifsdóttir og Jóhannes H Ríkharðsson",
+            "producer": "Stefanía Hjördís Leifsdóttir og Jóhannes H Ríkharðsson",
             "phone": "8691024, 8511021",
             "address": "Brúnastöðum, Fljótum",
             "zip": 570,
@@ -368,10 +385,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Kambsmýri 12",
+            "id": 18,
+            "name": "Kambsmýri 12",
             "latitude": 65.6822,
             "longitude": -18.1083,
-            "name": "Sigrún Héðinsdóttir og Jóhann Thorarensen",
+            "producer": "Sigrún Héðinsdóttir og Jóhann Thorarensen",
             "phone": "8456716, 8987332, ",
             "address": "Akureyrarsvæðið",
             "zip": 601,
@@ -389,10 +407,11 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "id": "Stóra-Dunhaga (Huldubúð)",
+            "id": 19,
+            "name": "Stóra-Dunhaga (Huldubúð)",
             "latitude": 65.75305,
             "longitude": -18.28088333,
-            "name": "Hulda Arnsteinsdóttir",
+            "producer": "Hulda Arnsteinsdóttir",
             "phone": "8921718",
             "address": "Stóra-Dunhaga (Huldubúð)",
             "zip": 601,
