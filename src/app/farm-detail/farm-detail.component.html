@@ -1,10 +1,8 @@
 <div *ngIf="farm">
   <h2>{{farm.properties.name | uppercase}}</h2>
-  <div><span>id: </span>{{hero.address}}</div>
-  <div>
-    <label>name:
-      <input placeholder="name"/>
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
+  <div><span>Heimilisfang: </span>{{farm.properties.address}}</div>
+  <img src="../assets/img/sveitabar.jpg">
+  <h4>{{farm.properties.products}}</h4>
+  <button (click)="goBack()">Aftur á aðalsíðu</button>
+  <button>Panta vöru</button>
 </div>

@@ -33,7 +33,7 @@ export const FARMS = {
               ]
             },
             "properties": {
-              "id": 2,
+               "id": 2,
                "name": "Hulduland í Hegranesi",
                "latitude": 65.74913333,
                "longitude": -19.6484,
@@ -77,7 +77,7 @@ export const FARMS = {
               ]
             },
             "properties": {
-            "4": 4,
+            "id": 4,
             "name": "Pura Natura",
             "latitude": 65.67023333,
             "longitude": -19.44495,
@@ -164,8 +164,8 @@ export const FARMS = {
                 65.58738333
               ]
             },
-            "id": 8,
             "properties": {
+            "id": 8,
             "name": "Syðra-Skörðugili",
             "latitude": 65.58738333,
             "longitude": -19.49953333,
