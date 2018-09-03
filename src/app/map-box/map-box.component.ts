@@ -41,11 +41,6 @@ export class MapBoxComponent implements OnInit {
       center: [this.lng, this.lat]
     });
 
-    var popup = new mapboxgl.Popup({
-      closeButton: false,
-      closeOnClick: false
-    });
-
     map.on('load', (event) => {
       map.addSource('farms', {
         type: 'geojson',
@@ -88,7 +83,7 @@ export class MapBoxComponent implements OnInit {
           var link = listing.appendChild(document.createElement('a'));
           //link.href = '#';
           link.className = 'title';
-          link.dataPosition = i;
+          //link.dataPosition = i;
           link.innerHTML = prop.id;
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.address;
@@ -115,23 +110,20 @@ export class MapBoxComponent implements OnInit {
       function createPopUp(currentFeature) {
         var popUps = document.getElementsByClassName('mapboxgl-popup');
         if (popUps[0]) popUps[0].remove();
-        console.log(FARMS);
         var popup = new mapboxgl.Popup({ closeOnClick: false })
           .setLngLat(currentFeature.geometry.coordinates)
           .setHTML('<h3>' + currentFeature.properties.address + '</h3>' +
             '<h4 class="product">' + currentFeature.properties.products + '</h4>' +
             '<h4>' + currentFeature.properties.name + '</h4>' +
-            '<div id="panta">Skoða framleiðanda</div>'
+            '<div id="panta">' + currentFeature.properties.id + '</div>'
           )
           .addTo(map);
           var order = document.getElementById('panta');
           order.addEventListener('click', function(e) {
+            console.log(e.target);
             document.getElementById("pant").click();
           });
       }
-
      }     
-
   )};
-
 }
