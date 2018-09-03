@@ -81,9 +81,9 @@ export class MapBoxComponent implements OnInit {
           listing.className = 'item';
           listing.id = 'listing-' + i;
           var link = listing.appendChild(document.createElement('a'));
-          //link.href = '#';
+          link.href = '#';
           link.className = 'title';
-          //link.dataPosition = i;
+          link.dataPosition = i;
           link.innerHTML = prop.id;
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.address;
