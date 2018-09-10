@@ -114,9 +114,9 @@ export class MapBoxComponent implements OnInit {
         if (popUps[0]) popUps[0].remove();
         var popup = new mapboxgl.Popup({ closeOnClick: false })
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>' + currentFeature.properties.address + '</h3>' +
+          .setHTML('<h3>' + currentFeature.properties.name + '</h3>' +
             '<h4 class="product">' + currentFeature.properties.products + '</h4>' +
-            '<h4>' + currentFeature.properties.name + '</h4>' +
+            '<h4>' + currentFeature.properties.address + '</h4>' +
             '<div id="panta">Skoða framleiðanda</div>'
           )
           .addTo(map);

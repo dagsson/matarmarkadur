@@ -1,4 +1,34 @@
 #farm-wrap {
     text-align: center;
     font-family: source sans pro;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.farm-img-wrap {
+    height: 600px;
+    overflow: hidden;
+}
+
+#farm-wrap img {
+    height: auto;
+    width: 100%;
+}
+#farm-wrap button {
+    margin-right: 15px;
+}
+
+#farm-wrap p {
+    padding: 5%;
+}
+
+#farm-wrap h2 {
+margin: 0 auto !important;
+background-color: #437b0c;
+color: white;
+padding: 15px;
+}
+
+.farm_info {
+    padding: 7% 0 0 0;
 }
