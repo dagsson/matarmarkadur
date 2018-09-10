@@ -6,13 +6,15 @@ import { MapBoxComponent } from './map-box/map-box.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { FarmComponent } from './farm/farm.component';
 import { FarmDetailComponent } from './farm-detail/farm-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapBoxComponent,
     FarmComponent,
-    FarmDetailComponent
+    FarmDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

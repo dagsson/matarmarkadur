@@ -20,6 +20,7 @@ export class MapBoxComponent implements OnInit {
   // data
   source: any;
   markers: any;
+  dataPosition: any;
 
   constructor(private mapService: MapService, private router: Router) { 
   }
@@ -81,7 +82,7 @@ export class MapBoxComponent implements OnInit {
           var listing = listings.appendChild(document.createElement('div'));
           listing.className = 'item';
           listing.id = 'listing-' + i;
-          var link = listing.appendChild(document.createElement('a'));
+          var link = <HTMLElement>listing.appendChild(document.createElement('a'));
           //link.href = '#';
           link.className = 'title';
           link.dataPosition = i;

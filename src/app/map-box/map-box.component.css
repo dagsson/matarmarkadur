@@ -23,6 +23,17 @@
     font-family: 'Source Sans Pro';
     -webkit-font-smoothing: antialiased;
   }
+
+  :host >>> h3 {
+    font-size: 1rem !important;
+  }
+
+  .about_text {
+    line-height: 24px;
+    font-family: source sans pro;
+    color: rgb(32, 32, 32);
+    padding: 0 15px 0 15px;
+  }
   
   a {
     color: #404040;
@@ -54,11 +65,11 @@
   .heading {
     background: #fff;
     border-bottom: 1px solid #eee;
-    height: 60px;
+    height: 50vh;
     line-height: 60px;
     padding: 0 10px;
-    background-color: #00853e;
-    color: #fff !important;
+    background-color: white;
+    color: #00853eff !important;
   }
   
   .listings {

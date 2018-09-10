@@ -120,8 +120,8 @@ export const FARMS = {
                 65.68588333
               ]
             },
-            "id": 6,
             "properties": {
+            "id": 6,
             "name": "Birkihlíð",
             "latitude": 65.68588333,
             "longitude": -19.61038333,
@@ -208,8 +208,8 @@ export const FARMS = {
                 65.43296667
               ]
             },
-            "id": 10,
             "properties": {
+            "id": 10,
             "name": "Starrastöðum",
             "latitude": 65.43296667,
             "longitude": -19.3327,
