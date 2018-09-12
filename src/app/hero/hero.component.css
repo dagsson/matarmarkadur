@@ -1,0 +1,9 @@
+#hero {
+    height: 60vh;
+    background: linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
+}
+
+.map, .sidebar {
+    top: none !important;
+    bottom: none !important;
+}

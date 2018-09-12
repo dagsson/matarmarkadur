@@ -57,8 +57,7 @@
     position: absolute;
     width: 33.3333%;
     height: 100%;
-    top: 0;
-    left: 0;
+
     overflow: hidden;
   }
   
@@ -66,8 +65,7 @@
     position: absolute;
     left: 33.3333%;
     width: 66.6666%;
-    top: 0;
-    bottom: 0;
+    height: 100%;
   }
   
   .heading {
