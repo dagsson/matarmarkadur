@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { HeroComponent } from './hero/hero.component';
+import { BigmapComponent } from './bigmap/bigmap.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeroComponent } from './hero/hero.component';
     LoginComponent,
     EmailComponent,
     SignupComponent,
-    HeroComponent
+    HeroComponent,
+    BigmapComponent
   ],
   imports: [
     BrowserModule,
