@@ -23,10 +23,10 @@
   
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-    font-size: .9rem;
-    font-weight: 700;
+    font-size: .7rem;
+    font-weight: 200 !important;
     text-transform: uppercase;
-    color: #212529;
+    letter-spacing: 2.5px;
   }
   
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -48,7 +48,7 @@
   @media (min-width: 992px) {
     #mainNav {
       border-color: transparent;
-      background-color: transparent;
+      background-color: #28a745;
     }
     #mainNav .navbar-brand {
       color: rgba(255, 255, 255, 0.7);

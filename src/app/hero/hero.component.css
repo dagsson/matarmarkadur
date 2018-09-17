@@ -55,13 +55,16 @@
   }
   
   .btn-primary {
-    background-color: #F05F40;
-    border-color: #F05F40;
+    color: #fff;
+    font-weight: 400;
+    background-color: #28A743;
+    letter-spacing: 2.5px;
+    font-size: 12px;
   }
   
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    color: #fff;
-    background-color: #ee4b28 !important;
+    color: #28A743;
+    background-color: white;
   }
   
   .btn-primary:active, .btn-primary:focus {

@@ -1,14 +1,27 @@
-<div class="header"></div>
-<div class='sidebar pad2'>
-    <a id="pant" [routerLink] = "['/farm', parameter]"></a>
-    <div class='heading'>
-        <h1>Bændamarkaður Hofsósi</h1>
-        <div class="mainimg_wrap"><img src="../assets/img/pakkhus.jpg"></div>
-        <div class="about_text">
-            <p>Bændamarkaðurinn í Hofsósi fer fram í hinu menningarsögulega um 250 ára gamla Pakkhúsi á Hofsósi sem er hluti af húsasafni Þjóðminjasafns Íslands - Býður upp á norðlenskar afurðir frá bændum og öðrum framleiðendum og handverksfólki. Hér að neðan er listi yfir þá staði sem er þáttakendur í bændamarkaðinum í ár.
-            </p>
-        </div>   
+<header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h1 class="text-uppercase">
+                <strong>Bændamarkaður<br> Hofsósi</strong>
+              </h1>
+              <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+              <p class="text-faded mb-5">Bændamarkaðurinn í Hofsósi fer fram í hinu menningarsögulega um 250 ára gamla Pakkhúsi á Hofsósi sem er hluti af húsasafni Þjóðminjasafns Íslands - Býður upp á norðlenskar afurðir frá bændum og öðrum framleiðendum og handverksfólki. Hér að neðan er listi yfir þá staði sem er þáttakendur í bændamarkaðinum í ár.</p>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" routerLink="/bm-hofsos">Skoða nánar</a>
+            </div>
+          </div>
+        </div>
+      </header>
+<div id="food_market_map">
+    <div class="header"></div>
+    <div class='sidebar pad2'>
+        <a id="pant" [routerLink] = "['/farm', parameter]"></a>
+        <div class='heading'>
+            <h1>Bændamarkaður Hofsósi</h1> 
+        </div>
+        <div id='listings' class='listings'></div>   
     </div>
-    <div id='listings' class='listings'></div>   
+    <div class="map pad2" id="map"></div>
 </div>
-<div class="map pad2" id="map"></div>

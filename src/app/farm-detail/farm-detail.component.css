@@ -1,34 +1,38 @@
 #farm-wrap {
     text-align: center;
     font-family: source sans pro;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
 }
 
+.farm_info {
+    padding: 5% 10%;
+}
+
+.farm_practical {
+    margin-bottom: 30px;
+}
+
 .farm-img-wrap {
-    height: 600px;
+    max-height: 500px;
     overflow: hidden;
 }
 
 #farm-wrap img {
     height: auto;
     width: 100%;
+    background-position: center; 
 }
+
 #farm-wrap button {
     margin-right: 15px;
 }
 
-#farm-wrap p {
-    padding: 5%;
-}
-
 #farm-wrap h2 {
-margin: 0 auto !important;
-background-color: #437b0c;
-color: white;
-padding: 15px;
-}
-
-.farm_info {
-    padding: 7% 0 0 0;
+    margin: 0 auto !important;
+    background-color: #dee2e6;
+    color: #383d41;
+    padding: 15px;
+    width: 100%;
+    letter-spacing: 2.5px;
 }
