@@ -6,7 +6,7 @@
 }
 
 .farm_info {
-    padding: 5% 10%;
+    padding: 30px 10%;
 }
 
 .farm_practical {
@@ -29,10 +29,22 @@
 }
 
 #farm-wrap h2 {
-    margin: 0 auto !important;
-    background-color: #dee2e6;
-    color: #383d41;
-    padding: 15px;
-    width: 100%;
+    color: #00aa34; 
     letter-spacing: 2.5px;
+    font-weight: bolder;
+}
+
+.farm_heading_wrap {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.farm_practical span {
+    font-size: 14px;
+}
+
+.modal-products {
+    max-width: 90%;
 }

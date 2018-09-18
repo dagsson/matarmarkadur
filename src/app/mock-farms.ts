@@ -20,7 +20,7 @@ export const FARMS = {
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
               "products": "Handverk, sápur, púðar",
-              "img": "https://dagsson.github.io/assets/img/farm.jpg"
+              "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -42,7 +42,7 @@ export const FARMS = {
                "address": "Skagfirðingabraut 7, Sauðarkróki - Hulduland í Hegranesi",
                "zip": 550,
                "products": "Hunang, saltfiskur, hákarl, siginn fiskur, varasalvi",
-               "img": "https://dagsson.github.io/assets/img/farm.jpg"
+               "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -64,7 +64,7 @@ export const FARMS = {
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
             "products": "Bleikja - reyktar afurðir",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -86,7 +86,7 @@ export const FARMS = {
             "address": "Pura Natura, Ríp 3, Sauðárkróki",
             "zip": 551,
             "products": "Bætiefni úr lambalifur, innmat og jurtum",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -108,7 +108,7 @@ export const FARMS = {
             "address": "Keldudal, Sauðárkróki",
             "zip": 551,
             "products": "Kjöt, lamb og naut, gærur",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -130,7 +130,7 @@ export const FARMS = {
             "address": "Birkihlíð, Staðahreppur, Sauðárkróki",
             "zip": 551,
             "products": "Kjöt, lamb og naut",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -152,7 +152,7 @@ export const FARMS = {
             "address": "Laugarmýri, Varmahlíð",
             "zip": 561,
             "products": "Grænmeti, kryddjurtir og sumarblóm",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -174,7 +174,7 @@ export const FARMS = {
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
             "products": "Smyrsl og krem frá Gandi ",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://www.farmpower.com/Two%20cows.JPG"
             }
           },
           {
@@ -196,7 +196,7 @@ export const FARMS = {
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
             "products": "Útiræktað grænmeti",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
             }
           },
           {
@@ -218,7 +218,7 @@ export const FARMS = {
             "address": "Starrastöðum, Varmahlíð",
             "zip": 561,
             "products": "Afskornar rósir",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
             }
           },
           {
@@ -240,7 +240,7 @@ export const FARMS = {
             "address": "Þverá, Varmahlíð",
             "zip": 561,
             "products": "Handverk úr hrosshárum, ull, handsútuđum gærum og smálambaskinni",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
             }
           },
           {
@@ -262,7 +262,7 @@ export const FARMS = {
             "address": "Sölvanesi, Varmahlíð",
             "zip": 561,
             "products": "Kjöt",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
             }
           },
           {
@@ -284,7 +284,7 @@ export const FARMS = {
             "address": "Stórhóll, Lýtingstaðahreppi, Varmahlíð",
             "zip": 561,
             "products": "Lambakjöt, kiðlingakjöt, ærkjöt, andaregg,ullar og leðurhandverk",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
             }
           },
           {
@@ -306,7 +306,7 @@ export const FARMS = {
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
             "products": "Harðfiskur, egg, (pylsur ofl.)",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
             }
           },
           {
@@ -328,7 +328,7 @@ export const FARMS = {
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
             "products": "Ferskur fiskur",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
             }
           },
           {
@@ -350,7 +350,7 @@ export const FARMS = {
             "address": "Molastaðir, Fljótum",
             "zip": 570,
             "products": "Andaregg",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
             }
           },
           {
@@ -372,7 +372,7 @@ export const FARMS = {
             "address": "Brúnastöðum, Fljótum",
             "zip": 570,
             "products": "Andaregg, hænuegg, kornhænuegg, (geitaafurðir, geitaostar)",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
             }
           },
           {
@@ -394,7 +394,7 @@ export const FARMS = {
             "address": "Akureyrarsvæðið",
             "zip": 601,
             "products": "Gulrætur ofl.",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
             }
           },
           {
@@ -416,7 +416,7 @@ export const FARMS = {
             "address": "Stóra-Dunhaga (Huldubúð)",
             "zip": 601,
             "products": "Pestó, sultur ofl.",
-            "img": "https://dagsson.github.io/assets/img/farm.jpg"
+            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
             }
           }
         ]

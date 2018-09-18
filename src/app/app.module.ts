@@ -18,6 +18,7 @@ import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { HeroComponent } from './hero/hero.component';
 import { BigmapComponent } from './bigmap/bigmap.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BigmapComponent } from './bigmap/bigmap.component';
     EmailComponent,
     SignupComponent,
     HeroComponent,
-    BigmapComponent
+    BigmapComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -48,24 +48,24 @@
   @media (min-width: 992px) {
     #mainNav {
       border-color: transparent;
-      background-color: #28a745;
+      background-color: #e9ecef;
     }
     #mainNav .navbar-brand {
-      color: rgba(255, 255, 255, 0.7);
+      color: #343a40;
     }
     #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: #fff;
+      color: #343a40;
     }
     #mainNav .navbar-nav > li.nav-item > a.nav-link {
       padding: 0.5rem 1rem;
     }
     #mainNav .navbar-nav > li.nav-item > a.nav-link,
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-      color: rgba(255, 255, 255, 0.7);
+      color: #343a40;
     }
     #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
     #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-      color: #fff;
+      color: #28A743;
     }
     #mainNav.navbar-shrink {
       border-bottom: 1px solid rgba(33, 37, 41, 0.1);

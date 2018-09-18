@@ -1,19 +1,98 @@
 <div *ngIf="farm" id="farm-wrap">
   <div class="farm-img-wrap">
     
-    <img src="../assets/img/pakkhus.jpg">
+    <img src="{{farm.properties.img}}">
     
   </div>
+  <div class="farm_heading_wrap">
   <h2>{{farm.properties.name | uppercase}}</h2>
+  <button class="btn btn-primary"(click)="goBack()">Aftur á aðalsíðu</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Panta Vöru
+    </button>
+  </div>
   <div class="farm_info">
     <div class="farm_practical">
       
-      <h4><span>Heimilisfang: </span>{{farm.properties.address}}</h4>
-      <h4><span>Vörur: </span>{{farm.properties.products}}</h4>
+      <h4><span>Staðsetning: </span><br>{{farm.properties.address}}</h4>
+      <h4><span>Vörur: </span><br>{{farm.properties.products}}</h4>
     </div>
     
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae lorem in mauris vehicula dignissim. Pellentesque gravida eros ut augue faucibus iaculis. Nunc aliquam urna et diam maximus sagittis. Mauris pulvinar maximus augue at vestibulum. Donec facilisis tincidunt blandit. Etiam condimentum ex nec erat suscipit laoreet. Duis viverra dictum tortor, ut interdum nibh rutrum at. Vestibulum non erat a magna iaculis finibus. Vestibulum sit amet mollis lorem, eget tincidunt tortor. Curabitur vulputate eu justo sed lacinia. Etiam bibendum, urna eu sollicitudin mattis, nunc mi consectetur massa, id pretium ipsum orci eu est. In interdum tincidunt nisl, id tincidunt odio condimentum ac.</p>
-    <button class="btn btn-primary"(click)="goBack()">Aftur á aðalsíðu</button>
-    <button class="btn btn-primary">Panta vöru</button>
+    
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-products" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Vörulisti</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Gripur</th>
+                        <th scope="col">Fæðingard.</th>
+                        <th scope="col">Kyn</th>
+                        <th scope="col">Staða</th>
+                        <th scope="col">Stofn</th>
+                        <th scope="col">Sláturd.</th>
+                        <th scope="col">Fallþ.</th>
+                        <th scope="col">Vöðvafl.</th>
+                        <th scope="col">Fitufl.</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Hætta við</button>
+              <button type="button" class="btn btn-primary">Klára pöntun</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
