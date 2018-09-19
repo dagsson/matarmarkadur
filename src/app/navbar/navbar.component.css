@@ -24,7 +24,7 @@
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
     font-size: .7rem;
-    font-weight: 200 !important;
+    color: #005565;
     text-transform: uppercase;
     letter-spacing: 2.5px;
   }

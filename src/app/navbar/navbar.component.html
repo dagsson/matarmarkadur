@@ -7,16 +7,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Um síðuna</a>
+            <a routerLink="/about" class="nav-link js-scroll-trigger" href="#about">Um síðuna</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Beint frá Býli</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" routerLink="/bm-hofsos" href="#portfolio">Bændamarkaður Hofsósi</a>
+            <a class="nav-link js-scroll-trigger" routerLink="/bm-hofsos" href="#portfolio">Bændamarkaður</a>
           </li>
           <li class="nav-item" *ngIf="!(authService.user | async)">
-            <a routerLink="/login" class="nav-link js-scroll-trigger" href="#contact">Innskráning</a>
+            <a routerLink="/login" class="nav-link js-scroll-trigger" href="#contact">Vefverslun</a>
           </li>
           <li class="nav-item" *ngIf="authService.user | async">
               <a (click)="logout()" class="nav-link js-scroll-trigger" href="#contact">Útskráning</a>

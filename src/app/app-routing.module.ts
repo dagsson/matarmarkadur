@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HeroComponent } from './hero/hero.component';
 import { BigmapComponent } from './bigmap/bigmap.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'home', component: HeroComponent },
-  { path: 'matarlandslag', component: BigmapComponent }
+  { path: 'matarlandslag', component: BigmapComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({

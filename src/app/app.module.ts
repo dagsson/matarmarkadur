@@ -19,6 +19,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HeroComponent } from './hero/hero.component';
 import { BigmapComponent } from './bigmap/bigmap.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     SignupComponent,
     HeroComponent,
     BigmapComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

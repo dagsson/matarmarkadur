@@ -1,7 +1,7 @@
 <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
 
-<div *ngIf="!(authService.user | async)">
-    <div class="container login_wrap">
+<div *ngIf="!(authService.user | async)" class="login_wrap">
+    <div class="container">
         <div class="row">
           <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">

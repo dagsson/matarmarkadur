@@ -14,6 +14,17 @@
     color: white;
 }
 
+#sub-title {
+  font-size: 22px;
+  color: #00aa31;
+}
+
+#hero p {
+  font-family: source sans pro;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+}
+
 .bg-primary {
     background-color: #F05F40 !important;
   }

@@ -14,7 +14,7 @@
       <h4><span>Vörur: </span><br>{{farm.properties.products}}</h4>
     </div>
   <button class="btn btn-primary"(click)="goBack()">Aftur á aðalsíðu</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <button *ngIf="farm.properties.id == 6" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
       Skoða vörur
     </button>
   <div class="farm_info">
