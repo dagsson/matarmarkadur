@@ -100,7 +100,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 5,
-            "name": "Keldudal",
+            "name": "Keldudalur",
             "latitude": 65.6625,
             "longitude": -19.47656667,
             "producer": "Þórarinn Leifsson og Guðrún Lárusdóttir",
@@ -122,6 +122,9 @@ export const FARMS = {
             },
             "properties": {
             "id": 6,
+            "marker-color": "#3bb2d0",
+            "marker-size": "large",
+            "marker-symbol": "8",
             "name": "Birkihlíð",
             "latitude": 65.68588333,
             "longitude": -19.61038333,
@@ -166,7 +169,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 8,
-            "name": "Syðra-Skörðugili",
+            "name": "Syðra-Skörðugil",
             "latitude": 65.58738333,
             "longitude": -19.49953333,
             "producer": "Einar Eðvald Einarsson og Sólborg Una Pálsdóttir",
@@ -174,7 +177,8 @@ export const FARMS = {
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
             "products": "Smyrsl og krem frá Gandi ",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "img": "https://www.farmpower.com/Two%20cows.JPG",
+            "img_tvo": "../assets/img/mynd6.jpg"
             }
           },
           {
@@ -210,7 +214,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 10,
-            "name": "Starrastöðum",
+            "name": "Starrastaðir",
             "latitude": 65.43296667,
             "longitude": -19.3327,
             "producer": "María Reykdal",
@@ -254,7 +258,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 12,
-            "name": "Sölvanesi",
+            "name": "Sölvanes",
             "latitude": 65.38723333,
             "longitude": -19.24831667,
             "producer": "Rúnar Máni Gunnarsson og Eydís Magnúsdóttir",
@@ -298,7 +302,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 14,
-            "name": "Tjörnum",
+            "name": "Tjarnir",
             "latitude": 66.01206667,
             "longitude": -19.38921667,
             "producer": "Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir",
@@ -320,7 +324,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 15,
-            "name": "Lónkoti",
+            "name": "Lónkot",
             "latitude": 65.89618333,
             "longitude": -19.40191667,
             "producer": "Þorgils Pálsson, Hjálmar Höskuldur Hjálmarsson, Sigurjón",
@@ -364,7 +368,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 17,
-            "name": "Brúnastöðum",
+            "name": "Brúnastaðir",
             "latitude": 66.05541667,
             "longitude": -19.02241667,
             "producer": "Stefanía Hjördís Leifsdóttir og Jóhannes H Ríkharðsson",
@@ -408,7 +412,7 @@ export const FARMS = {
             },
             "properties": {
             "id": 19,
-            "name": "Stóra-Dunhaga (Huldubúð)",
+            "name": "Stóri-Dunhagi (Huldubúð)",
             "latitude": 65.75305,
             "longitude": -18.28088333,
             "producer": "Hulda Arnsteinsdóttir",

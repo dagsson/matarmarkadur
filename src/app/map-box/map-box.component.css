@@ -201,7 +201,7 @@
     width: 20px;
     border-radius: 100%;
     background-color: rgba(0, 133, 60, 0.753);
-    background-image: url('../../assets/img/marker.png');
+    /*background-image: url('../../assets/img/marker.png');*/
   }
 
   :host >>> #panta {

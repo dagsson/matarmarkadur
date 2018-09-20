@@ -21,6 +21,7 @@ export class MapBoxComponent implements OnInit {
   source: any;
   markers: any;
   dataPosition: any;
+  
 
   constructor(private mapService: MapService, private router: Router) { 
   }
@@ -41,6 +42,8 @@ export class MapBoxComponent implements OnInit {
       center: [this.lng, this.lat]
     });
 
+    var i = 0;
+
     var router = this.router;
 
     map.on('load', (event) => {
@@ -48,7 +51,6 @@ export class MapBoxComponent implements OnInit {
         type: 'geojson',
         data: FARMS
       });
-
   });
 
       map.scrollZoom.disable();
@@ -86,7 +88,7 @@ export class MapBoxComponent implements OnInit {
           var listing = listings.appendChild(document.createElement('div'));
           listing.className = 'item';
           listing.id = 'listing-' + i;
-          var link = <HTMLElement>listing.appendChild(document.createElement('a'));
+          var link = listing.appendChild(document.createElement('a'));
           //link.href = '#';
           link.className = 'title';
           link.dataPosition = i;
@@ -129,6 +131,6 @@ export class MapBoxComponent implements OnInit {
             router.navigate(['/farm/' + currentFeature.properties.id + '']);
           });
       }
-     }     
-  )};
-}
+    }     
+  }
+
