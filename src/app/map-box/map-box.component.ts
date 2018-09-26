@@ -21,7 +21,6 @@ export class MapBoxComponent implements OnInit {
   source: any;
   markers: any;
   dataPosition: any;
-  
 
   constructor(private mapService: MapService, private router: Router) { 
   }
@@ -43,6 +42,7 @@ export class MapBoxComponent implements OnInit {
     });
 
     var i = 0;
+    var j = 1
 
     var router = this.router;
 
@@ -58,9 +58,11 @@ export class MapBoxComponent implements OnInit {
       FARMS.features.forEach(function(marker) {
         var el = document.createElement('div');
         el.className = 'marker';
+        el.innerHTML = "" + j++;
         new mapboxgl.Marker(el, { offset: [0, -23] })
           .setLngLat(marker.geometry.coordinates)
           .addTo(map);
+          
           el.addEventListener('click', function(e) {
             var activeItem = document.getElementsByClassName('active');
             // 1. Fly to the point
@@ -73,7 +75,6 @@ export class MapBoxComponent implements OnInit {
               activeItem[0].classList.remove('active');
             }
             var listing = document.getElementById('listing-' + i);
-            console.log(listing);
             listing.classList.add('active');
           });
       });
@@ -81,6 +82,7 @@ export class MapBoxComponent implements OnInit {
       buildLocationList(FARMS);
 
       function buildLocationList(data) {
+        j = 1;
         for (var i = 0; i < data.features.length; i++) {
           var currentFeature = data.features[i];
           var prop = currentFeature.properties;
@@ -89,21 +91,20 @@ export class MapBoxComponent implements OnInit {
           listing.className = 'item';
           listing.id = 'listing-' + i;
           var link = listing.appendChild(document.createElement('a'));
-          //link.href = '#';
           link.className = 'title';
-          link.dataPosition = i;
-          link.innerHTML = prop.name;
+          link["dataPosition"] = i;
+          link.innerHTML = j++ + '. ' + prop.name;
           var details = listing.appendChild(document.createElement('div'));
           details.innerHTML = prop.address;
           link.addEventListener('click', function(e) {
-            var clickedListing = data.features[this.dataPosition];
+            var clickedListing = data.features[this["dataPosition"]];
             flyToStore(clickedListing);
             createPopUp(clickedListing);
             var activeItem = document.getElementsByClassName('active');
             if (activeItem[0]) {
               activeItem[0].classList.remove('active');
             }
-            this.parentNode.classList.add('active');       
+            this.parentNode["classList"].add('active');       
           });
         }
       }

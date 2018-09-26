@@ -20,8 +20,8 @@
 }
 
 #farm-wrap img {
-    height: auto;
-    width: 100%;
+    height: 600px;
+    width: auto;
     background-position: center; 
 }
 
@@ -47,6 +47,7 @@
 
 .farm_practical span {
     font-size: 14px;
+    color: lightgray;
 }
 
 .farm_practical h4 {

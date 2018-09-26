@@ -13,15 +13,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  #market_wrap {
-    position: absolute;
-    background-color: #0c5460e3;
-    width: 100%;
-    height: 75vh;
-    padding-top: 20vh;
-    padding-bottom: calc(10rem - 56px);
-  }
   
   h1 {
     font-size: 22px;
@@ -35,6 +26,46 @@
 
   :host >>> h3 {
     font-size: 1rem !important;
+  }
+
+  #market_wrap {
+    
+    font-family: source sans pro;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+
+  .market_info {
+      padding: 20px;
+      text-align: left;
+  }
+
+  .market_text {
+    padding: 8% 2%;
+  }
+
+  .market_heading_wrap {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+}
+
+  .market_heading {
+    letter-spacing: 2.5px;
+    font-weight: bolder;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  .market_img_wrap {
+    padding: 8% 2%;
+    overflow: hidden;
+  }
+
+  .market_img_wrap img {
+    max-height: 550px;
+    width: 100%;
   }
 
   .about_text {
@@ -75,16 +106,19 @@
     height: 700px;
   }
   
-  .heading {
+  .part_heading {
     background: #fff;
     border-bottom: 1px solid #eee;
     line-height: 60px;
-    background-color: #00aa34;
+    background-color: #383d41;
   }
 
-  .heading h1 {
+  .part_heading h1 {
     color: white;
     padding: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
   }
   
   .listings {
@@ -195,6 +229,10 @@
   }
 
   :host >>> .marker {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 9px;
     border: none;
     cursor: pointer;
     height: 20px;
@@ -206,15 +244,15 @@
 
   :host >>> #panta {
     padding: 10px;
-    background-color: #2f4c71;
     color: white;
     text-align: center;
     cursor: pointer;
+    background-color: #0C5463;
   }
 
   :host >>> #panta:hover {
     padding: 10px;
-    background-color: #1d7cf2;
+    background-color: #00853e;
     color: white;
     text-align: center;
   }
@@ -227,40 +265,10 @@
     color: #F05F40 !important;
   }
   
-  .btn {
-    font-weight: 700;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 300px;
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  }
-  
-  .btn-xl {
-    padding: 1rem 2rem;
-  }
-  
-  .btn-primary {
-    color: #fff;
-    font-weight: 400;
-    background-color: #28A743;
-    letter-spacing: 2.5px;
-    font-size: 12px;
-  }
-  
-  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    color: #28A743;
-    background-color: white;
-  }
-  
-  .btn-primary:active, .btn-primary:focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-  }
 
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
-    background-image: url('../../assets/img/pakkhus.jpg');
     background-position: center center;
     background-size: cover;
   }

@@ -2,28 +2,32 @@
   <div class="farm-img-wrap">
       <div class="container">
       <div class="row">
-        <div class="farm_mainimg col-8">
+        <div class="farm_mainimg col-lg-6">
             <div class="container">
                 <div class="row">
                   <div class="col">
                     <img src="{{farm.properties.img}}">
                   </div>
-                  <div class="col">
-                    <img src="{{farm.properties.img_tvo}}">
-                  </div>
                 </div>
             </div>
         </div>
-        <div class="farm_details col-4">
+        <div class="farm_details col-lg-6">
             <div class="farm_heading_wrap">
                 <h2>{{farm.properties.name | uppercase}}</h2>    
             </div>
             <div class="farm_info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae lorem in mauris vehicula dignissim. Pellentesque gravida eros ut augue faucibus iaculis. Nunc aliquam urna et diam maximus sagittis. Mauris pulvinar maximus augue at vestibulum. Donec facilisis tincidunt blandit.</p>
+            <p>{{farm.properties.info}}</p>
             </div>
             <div class="farm_practical">
-                <h4><span>Staðsetning: </span><br><br>{{farm.properties.address}}</h4><br>
-                <h4><span>Vörur: </span><br><br>{{farm.properties.products}}</h4>
+                <div class="row">
+                  <div class="col">
+                      <h4><span>Vörur: </span><br>{{farm.properties.products}}</h4>
+                  </div>
+                  <div class="col">
+                      <h4><span>Staðsetning: </span><br>{{farm.properties.address}}, {{farm.properties.zip}}</h4><br>
+                      <h4><span>Símanúmer: </span><br>{{farm.properties.phone}}</h4><br> 
+                  </div>  
+                </div>
             </div>
             
             <button class="btn btn-primary"(click)="goBack()">Aftur á aðalsíðu</button>

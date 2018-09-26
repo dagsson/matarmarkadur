@@ -1,27 +1,30 @@
 
-<header class="masthead text-center text-white d-flex">
-        <div id="market_wrap">
-        <div class="container text-center my-auto">
-          <div class="row">
-            <div class="col-lg-10 mx-auto">
-              <h1 class="text-uppercase">
-                <strong>Bændamarkaður<br> Hofsósi</strong>
-              </h1>
+
+<div id="market_wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 market_img_wrap">
+              <img src="../../assets/img/pakkhus.jpg">
             </div>
-            <div class="col-lg-8 mx-auto">
-              <p class="text-faded mb-5">Bændamarkaðurinn í Hofsósi fer fram í hinu menningarsögulega um 250 ára gamla Pakkhúsi á Hofsósi sem er hluti af húsasafni Þjóðminjasafns Íslands - Býður upp á norðlenskar afurðir frá bændum og öðrum framleiðendum og handverksfólki. Hér að neðan er listi yfir þá staði sem er þáttakendur í bændamarkaðinum í ár.</p>
-              <a class="btn btn-primary btn-xl js-scroll-trigger" routerLink="/bm-hofsos">Skoða nánar</a>
+            <div class="col-lg-4 market_text">
+              <div class="market_heading_wrap">
+              <h2 class="market_heading">
+                Bændamarkaður<br> Hofsósi
+              </h2>
+              </div>
+              <div class="market_info">
+              <p>Bændamarkaðurinn í Hofsósi fer fram í hinu menningarsögulega Pakkhúsi á Hofsósi sem er hluti af húsasafni Þjóðminjasafns Íslands. Þarna er boðið upp á norðlenskar afurðir frá bændum og öðrum framleiðendum og handverksfólki. Hér að neðan er listi yfir þá staði sem er þáttakendur í bændamarkaðinum í ár.</p>
             </div>
-          </div>
+            </div>
         </div>
     </div>
-</header>
+</div>
 
 <div id="food_market_map">
     <div class="header"></div>
     <div class='sidebar pad2'>
         <a id="pant" [routerLink] = "['/farm', parameter]"></a>
-        <div class='heading'>
+        <div class='part_heading'>
             <h1>Þátttakendur</h1> 
         </div>
         <div id='listings' class='listings'></div>   

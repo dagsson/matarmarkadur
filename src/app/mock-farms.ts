@@ -42,7 +42,8 @@ export const FARMS = {
                "address": "Skagfirðingabraut 7, Sauðarkróki - Hulduland í Hegranesi",
                "zip": 550,
                "products": "Hunang, saltfiskur, hákarl, siginn fiskur, varasalvi",
-               "img": "https://www.farmpower.com/Two%20cows.JPG"
+               "info": "Hjónin Pálmi og María fengu sitt fyrsta býflugnabú sumarið 2014 og þá var ekki aftur snúið. Pálmi er sjómaður og María kennari en þau hjón stunda býflugnabúskapinn og aðra framleiðslu og vinnslu afurða sinna, svo sem fiskmetis, í hjáverkum. 'Við höfum lengi haft áhuga á sjálfsþurftarbúskap og var það helsta ástæðan fyrir því að við fengum okkur býflugur. Jörðin sem við eigum býður heldur ekki upp á hefðbundinn búskap svo við erum alltaf að leita nýrra leiða til að rækta dýr og plöntur sem fólk er almennt ekki mikið að spá í. Við höfum náð meiri tengingu við náttúruna með því að hafa fylgst með hvar flugurnar ná í fæðu þá stundina. Eins er ótrúlega gaman að fylgjast með býflugunum vinna og koma heim með fulla vasa af frjókorni í mismunandi litum. Þá höfum við ánægju af því að gera alls kyns tilraunir í ræktun og sjá hvað gengur og hvað ekki.'",
+               "img": "../assets/img/mynd3.jpg"
             }
           },
           {
@@ -132,8 +133,9 @@ export const FARMS = {
             "phone": "6905528",
             "address": "Birkihlíð, Staðahreppur, Sauðárkróki",
             "zip": 551,
-            "products": "Kjöt, lamb og naut",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "products": "Lambakjöt ofl.",
+            "info": "Þröstur og eiginkona hans, Ragnheiður Lára Brynjólfsdóttir, hófu búskap 1999. Þröstur er alinn upp í Skagafirði og hefur starfað við sveitastörf allt sitt líf, en fór á nokkrar vertíðar yfir veturinn á sjó. 'Það skemmtilegasta við að búa og starfa í sveit er að njóta íslenskrar náttúru í allri sinni dýrð og takast á við fjölbreytileikann í hinu dagsdaglega starfi.'",
+            "img": "../assets/img/mynd5.jpg"
             }
           },
           {
@@ -155,7 +157,8 @@ export const FARMS = {
             "address": "Laugarmýri, Varmahlíð",
             "zip": 561,
             "products": "Grænmeti, kryddjurtir og sumarblóm",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "info": "Róbert er menntaður búfræðingur en Dagný er byggingariðnfræðingur að mennt, jafnframt útskrifuð af myndlistabraut Menntaskólans á Akureyri. Hún vann áður við smíðar og tók í framhaldi sveinsprófið í smíðum áður en hún hóf nám við byggingariðnfræði. Árið 2011 tóku þau hjón óvænt við búrekstri og fyrirtæki foreldra hennar, en garðyrkjustöðin Laugarmýri hefur verið starfrækt frá 1947 og er Dagný þriðji ættliðurinn sem tekur við.",
+            "img": "../assets/img/mynd4.jpg"
             }
           },
           {
@@ -177,8 +180,9 @@ export const FARMS = {
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
             "products": "Smyrsl og krem frá Gandi ",
-            "img": "https://www.farmpower.com/Two%20cows.JPG",
-            "img_tvo": "../assets/img/mynd6.jpg"
+            "product_info": "Vörur undir vörumerkinu Gandur, úr íslenskri minkaolíu blandaðri íslenskum jurtum. Um er að ræða græðandi og mýkjandi smyrsli og handáburð fyrir fólk, en einnig smyrsli fyrir dýr og leðurfeiti (sjá www.gandur.is).",
+            "img": "../assets/img/mynd6.jpg",
+            "info": "Ásdís og eiginmaður hennar, Einar Eylert Gíslason hafa stundað búrekstur á Syðra-Skörðugili frá 1974, þegar þau tóku við rekstrinum af foreldrum hennar. Tveir af fjórum sonum þeirra tóku við rekstrinum árið 2000, en þau hafa tekið þátt í hinum ýmsu verkefnum búsins eftir því sem tími og orka hefur leyft. Ásdís er kennari að mennt og vann lengst af við kennslu samhliða búrekstrinum. „Það áhugaverðasta við búreksturinn er að heyra frá öllu því góða fólki sem er að nota vörurnar og er ánægt með þær.  Einnig er mjög jákvætt og umhverfisvænt að við erum að nýta fitu sem fellur til við verkun á minkaskinnum hér á búinu og jurtirnar tínum við sjálf hér í Skagafirði.  Við þekkjum því vel upprunann á hráefnunum og getum glöð staðfest að þetta eru íslenskar vörur úr íslenskum hráefnum."
             }
           },
           {
@@ -222,7 +226,8 @@ export const FARMS = {
             "address": "Starrastöðum, Varmahlíð",
             "zip": 561,
             "products": "Afskornar rósir",
-            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
+            "info": "María er ekkja síðan árið 2000 en hóf búskap á Starrastöðum 1982 og byggði fyrsta gróðurhúsið 1985. Fyrst um sinn var hún með pottablóm og ýmisleg afskorin blóm en fór að framleiða rósir eingöngu árið 2000. María er garðyrkjufræðingur og hefur að mestu unnið við garðyrkju og búskap síðan hún var unglingur. Árið 2011 útskrifaðist hún sem sálfræðingur og hefur unnið við það meðfram blómaræktinni síðan. “Það skemmtilegasta við blómaræktunina er að maður sér svo fljótt árangur af verkum sínum, ef þú sinnir þessu vel færðu einstaklega fallegar rósir,” en rósirnar hennar Maríu á Starrastöðum eru einmitt rómaðar fyrir fegurð og styrk.",
+            "img": "../assets/img/mynd2.jpg"
             }
           },
           {
@@ -288,7 +293,8 @@ export const FARMS = {
             "address": "Stórhóll, Lýtingstaðahreppi, Varmahlíð",
             "zip": 561,
             "products": "Lambakjöt, kiðlingakjöt, ærkjöt, andaregg,ullar og leðurhandverk",
-            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
+            "info": "Sigrún og eiginmaður hennar, Þórarinn Guðni Sverrisson, keyptu bústofninn 1995 og fluttu á Stórhól 1999. Sigrún er stúdent og garðyrkjufræðingur að mennt og hefur einnig sótt mikið af námskeiðum um handverk, heimavinnslu og rekstur fyrirtækja. Áður stundaði hún ýmis störf, svo sem fiskvinnslu, lanbúnaðastörf og garðyrkju, malbikun, kennslu og fleira, en Þórarinn vann áður í Steinaullarverksmiðjunni og við löndun. Þórarinn er núna formarður stéttarfélagsins Öldunnar í Skagafirði og vinnur fulla vinnu utan bústarfanna og Sigrún er jafnframt ritari samtakanna Beint frá býli. Að auki eiga þau hjón fimm börn. “Þrátt fyrir þrotlausa og mikla vinnu býr sveitin einnig yfir vissri rómantík, ég hef mikla ánægju af því að skapa og nota hráefni frá býlinu og því sem er í kringum mig. Heima á Stórhól á ég vinnustofu og litla sveitabúð, Rúnalist Gallerí, þar sem við seljum afurðir okkar. Það er mjög gefandi að bjóða til kaups sína eigin vöru, fylgja henni alla leið til neytandans, og geta frætt hann um tilurð vörunnar. Við tökum einnig á móti gestum og kynnum þeim dýrin okkar og þar eru geiturnar, íslenskar landnámsgeitur, fremstar í flokki.",
+            "img": "../assets/img/mynd7.jpg"
             }
           },
           {
@@ -376,7 +382,8 @@ export const FARMS = {
             "address": "Brúnastöðum, Fljótum",
             "zip": 570,
             "products": "Andaregg, hænuegg, kornhænuegg, (geitaafurðir, geitaostar)",
-            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
+            "info": "Stefanía og eiginmaður hennar Jóhannes Ríkharðsson reka sauðfjárbú á Brúnastöðum með um 800 vetrarfóðruðum kindum, skógrækt, ferðaþjónustu, húsdýragarð og fósturheimili og eiga að auki fjögur börn saman.  Auk þess dvelja hjá þeim um ár í senn að jafnaði einn til tveir verknemar frá landbúnaðarskólanum í Upernavirasuk í Grænlandi. Þau leigja út tvö stór hús til ferðamanna og sjá auk þess um rekstur Félagsheimilisins Ketiláss. Stefanía hefur stundað háskólanám í félagsmannfræði, trúarbragðasögu og stjórnmálafræði og hefur jafnframt framhaldsskólakennararéttindi og starfaði við kennslu og fleira áður. Hún hefur sérstakan áhuga á og hefur ferðast mikið um þriðja heiminn.  Þá taka þau þátt í Nytjaskógræktarverkefni á lögbýlum og hafa plantað um 70.000 trjáplöntum í um 32 ha lands. Sjálfstæðið þykir henni áhugaverðast við búreksturinn „að búa til í huganum mynd af því hvernig maður vill sjá hlutina þróast og hver endanlega myndin er og vinna svo að því eftir bestu getu. Að reyna að skila öllu í betra ástandi heldur en að maður tók við því. Gleyma samt ekki að njóta, frelsisins, náttúrunnar og fegurðarinnar í kringum sig. Og alls góða og skemmtilega fólksins sem kemur að hlutunum með manni, búa til góðar minningar fyrir það og mann sjálfan.",
+            "img": "../assets/img/mynd1.jpg"
             }
           },
           {
