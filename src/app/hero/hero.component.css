@@ -1,0 +1,129 @@
+#hero {
+    background: #0C5463;
+    height: 100vh;
+}
+
+#hero img {
+    height: 200px;
+    margin: 5%;
+}
+
+#hero h1 {
+    font-family: source sans pro;
+    letter-spacing: 11px;
+    color: white;
+}
+
+#sub-title {
+  font-size: 22px;
+  color: #00aa31;
+}
+
+#hero p {
+  font-family: source sans pro;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+}
+
+.bg-primary {
+    background-color: #F05F40 !important;
+  }
+  
+  .bg-dark {
+    background-color: #212529 !important;
+  }
+  
+  .text-faded {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  section {
+    padding: 8rem 0;
+  }
+  
+  .section-heading {
+    margin-top: 0;
+  }
+
+.action-wrap {
+    padding: 5%;
+}
+
+.text-primary {
+    color: #F05F40 !important;
+  }
+  
+  .btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 300px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  .btn-xl {
+    padding: 1rem 2rem;
+  }
+  
+  .btn-primary {
+    color: #fff;
+    font-weight: 400;
+    background-color: #28A743;
+    letter-spacing: 2.5px;
+    font-size: 12px;
+  }
+  
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: #28A743;
+    background-color: white;
+  }
+  
+  .btn-primary:active, .btn-primary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+  }
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-image: url('../../assets/img/pakkhus.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  header.masthead hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  header.masthead h1 {
+    font-size: 2rem;
+  }
+  
+  header.masthead p {
+    font-weight: 300;
+  }
+  
+  @media (min-width: 768px) {
+    header.masthead p {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      height: 100vh;
+      min-height: 650px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    header.masthead h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    header.masthead h1 {
+      font-size: 4rem;
+    }
+  }

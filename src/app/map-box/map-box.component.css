@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+:host >>> body {
+    color: #404040;
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 20px 2px;
+    font-family: 'Source Sans Pro';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :host >>> h3 {
+    font-size: 1rem !important;
+  }
+
+  #market_wrap {
+    
+    font-family: source sans pro;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+
+  .market_info {
+      padding: 20px;
+      text-align: left;
+  }
+
+  .market_text {
+    padding: 8% 2%;
+  }
+
+  .market_heading_wrap {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+}
+
+  .market_heading {
+    letter-spacing: 2.5px;
+    font-weight: bolder;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  .market_img_wrap {
+    padding: 8% 2%;
+    overflow: hidden;
+  }
+
+  .market_img_wrap img {
+    max-height: 550px;
+    width: 100%;
+  }
+
+  .about_text {
+    line-height: 24px;
+    font-family: source sans pro;
+    color: rgb(111, 111, 111);
+    padding: 20px;
+  }
+
+  .mainimg_wrap {
+    height: 65%;
+    overflow: hidden;
+  }
+
+  .mainimg_wrap img {
+    width: 100%;
+  }
+  
+  a {
+    color: #404040;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #101010;
+  }
+  
+  .sidebar {
+    position: absolute;
+    width: 33.3333%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .map {
+    margin-top: 77px;
+    left: 33.3333%;
+    width: 66.6666%;
+    height: 90vh;
+  }
+  
+  .part_heading {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    line-height: 60px;
+    background-color: #0C5463;
+  }
+
+  .part_heading h1 {
+    color: white;
+    padding: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+  }
+  
+  .listings {
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 60px;
+  }
+
+  :host >>> .mapboxgl-popup-hover h3 {
+    background-color: red !important;
+    text-align: center;
+  }
+  
+  :host >>> .listings .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Source Sans Pro';
+    color: #404040;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  :host >>> .listings .item:last-child { border-bottom: none; }
+  
+  :host >>> .listings .item .title {
+    display: block;
+    color: #00853e;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Source Sans Pro';
+    padding-bottom: 5px;
+  }
+  
+  :host >>> .listings .item .title small {
+       font-weight: 400;
+       font-family: 'Source Sans Pro' !important;
+    }
+  
+  :host >>> .listings .item.active .title,
+  :host >>> .listings .item .title:hover { color: #8cc63f; }
+  
+  :host >>> .listings .item.active {
+    background-color: #f8f8f8;
+  }
+  
+  :host >>> ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  :host >>> ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  :host >>> ::-webkit-scrollbar-thumb {
+    background: #00853e;
+    border-radius: 0;
+  }
+  
+  :host >>> .clearfix { display: block; }
+  
+  .clearfix::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  :host >>> .mapboxgl-popup-close-button {
+    display: none;
+  }
+  
+  :host >>> .mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+    padding: 0;
+    width: 180px;
+  }
+
+  :host >>> .mapboxgl-popup-content h3 {
+    background: #91c949;
+    color: #fff;
+    margin: 0;
+    display: block;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    font-weight: 700;
+    margin-top: -15px;
+  }
+
+  :host >>> .mapboxgl-popup-content h4 {
+    margin: 0;
+    display: block;
+    padding: 10px 10px 10px 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  :host >>> .mapboxgl-popup-content .product {
+    color: #00853e;
+    font-weight: 600;
+  }
+  
+  :host >>> .mapboxgl-popup-content-wrapper {
+    padding: 1%;
+  }
+
+  :host >>> .mapboxgl-popup-tip {
+    border-top-color: white;
+    color: #fff;;
+  }
+
+
+  :host >>> .mapboxgl-popup {
+    padding-bottom: 50px;
+    z-index: 1000000;
+  }
+
+  :host >>> .mapboxgl-popup p {
+    font-size: 16px;
+    text-align: center;
+    color:white;
+  }
+
+  :host >>> .mapboxgl-popup .pophov {
+    background-color: #0C5463;
+    height: auto;
+    padding: 20px 5px 5px;
+  }
+
+  :host >>> .marker {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 9px;
+    border: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: rgba(0, 133, 60, 0.753);
+    /*background-image: url('../../assets/img/marker.png');*/
+  }
+
+  :host >>> #panta {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0C5463;
+  }
+
+  :host >>> #panta:hover {
+    padding: 10px;
+    color: orange;
+    text-align: center;
+  }
+
+  #pant {
+    display: none;
+  }
+
+  .text-primary {
+    color: #F05F40 !important;
+  }
+  
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  header.masthead hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  header.masthead h1 {
+    font-size: 2rem;
+    line-height: 60px;
+    letter-spacing: 5.5px;
+  }
+  
+  header.masthead p {
+    font-weight: 300;
+  }
+  
+  @media (min-width: 768px) {
+    header.masthead p {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      height: 70vh;
+      min-height: 650px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    header.masthead h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    header.masthead h1 {
+      font-size: 3rem;
+    }
+  }

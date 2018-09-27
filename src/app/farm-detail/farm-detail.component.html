@@ -1,0 +1,175 @@
+<div *ngIf="farm" id="farm-wrap">
+  <div class="farm-img-wrap">
+      <div class="container">
+      <div class="row">
+        <div class="farm_mainimg col-lg-6">
+            <div class="container">
+                <div class="row">
+                  <div class="col farmimg">
+                    <img src="{{farm.properties.img}}">
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="farm_details col-lg-6">
+            
+            <div class="farm_heading_wrap">
+                <h2>{{farm.properties.name | uppercase}}</h2>    
+            </div>
+            <div class="farm_info">
+            <p>{{farm.properties.info}}</p>
+            
+            </div>
+            <div class="farm_practical">
+                <div class="row">
+                  <div class="col">
+                      <h4><span>Vörur: </span><br>{{farm.properties.products}}</h4>
+                  </div>
+                  <div class="col">
+                      <h4><span>Staðsetning: </span><br>{{farm.properties.address}}, {{farm.properties.zip}}</h4><br>
+                      <h4><span>Símanúmer: </span><br>{{farm.properties.phone}}</h4><br> 
+                  </div>  
+                </div>
+            </div>
+            <div class="buttons_wrapper">
+            <button class="btn btn-primary"(click)="goBack()">Aftur á yfirlitssíðu</button>
+            <button *ngIf="farm.properties.id == 6" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Skoða vörur
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-products" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Listi yfir lambaskrokka</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Númer lambs</th>
+                                  <th scope="col">Fæðingard.</th>
+                                  <th scope="col">Kyn</th>                             
+                                  <th scope="col">Sláturd.</th>
+                                  <th scope="col">Fallþungi.</th>
+                                  <th scope="col">Vöðvaflokkur</th>
+                                  <th scope="col">Fituflokkur</th>
+                                  <th scope="col">Sláturstaður</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">357</th>
+                                  <td>28.04.2018</td>
+                                  <td>Gimbralamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>19,5</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>  
+                                  <td>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                      Kjötstykki
+                                    </a>
+                                  
+                                  <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                      Læri, frampartur, hryggur
+                                    </div>
+                                  </div></td>
+
+                                </tr>
+                                <tr>
+                                  <th scope="row">358</th>
+                                  <td>29.04.2018</td>
+                                  <td>Gimbralamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>19,5</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>                 
+                                </tr>
+                                <tr>
+                                  <th scope="row">360</th>
+                                  <td>29.04.2018</td>
+                                  <td>Hrútlamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>18,3</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>           
+                                </tr>
+                                <tr>
+                                  <th scope="row">361</th>
+                                  <td>02.05.2018</td>
+                                  <td>Gimbralamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>22,1</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>           
+                                </tr>
+                                <tr>
+                                  <th scope="row">362</th>
+                                  <td>02.05.2018</td>
+                                  <td>Hrútlamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>17,4</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>           
+                                </tr>
+                                <tr>
+                                  <th scope="row">363</th>
+                                  <td>02.05.2018</td>
+                                  <td>Gimbralamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>18,6</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>           
+                                </tr>
+                                <tr>
+                                  <th scope="row">364</th>
+                                  <td>Vara 3</td>
+                                  <td>Hrútlamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>19,8</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>          
+                                </tr>
+                                <tr>
+                                  <th scope="row">365</th>
+                                  <td>02.05.2018</td>
+                                  <td>Hrútlamb</td>
+                                  <td>25.09.2018</td>
+                                  <td>21,1</td>
+                                  <td>R</td>
+                                  <td>3</td>
+                                  <td>Birkihlíð</td>         
+                                </tr>
+                              </tbody>
+                            </table>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hætta við</button>
+                        <button type="button" class="btn btn-primary">Klára pöntun</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+ 
+  
+  
+  
