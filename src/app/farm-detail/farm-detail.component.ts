@@ -20,7 +20,7 @@ export class FarmDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getFarm();
-    console.log(this.farm);
+    window.scrollTo(0, 0);
   }
 
   getFarm(): void {

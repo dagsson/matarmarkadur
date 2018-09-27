@@ -11,12 +11,27 @@
     text-align: left;
 }
 
-.farm_practical {
-    margin-bottom: 30px;
-}
-
 .farm-img-wrap {
     overflow: hidden;
+}
+
+.farmimg {
+    overflow: hidden;
+}
+
+.buttons_wrapper {
+    text-align: left;
+    padding: 20px;
+}
+
+.buttons_wrapper button {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.buttons_wrapper button:hover {
+    background-color: #175324;
+    border-color: #175324;
 }
 
 #farm-wrap img {
@@ -60,5 +75,5 @@
 }
 
 .farm_mainimg, .farm_details {
-    padding: 15% 0%;
+    padding: 15% 2%;
 }

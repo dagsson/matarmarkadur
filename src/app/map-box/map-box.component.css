@@ -110,7 +110,7 @@
     background: #fff;
     border-bottom: 1px solid #eee;
     line-height: 60px;
-    background-color: #383d41;
+    background-color: #0C5463;
   }
 
   .part_heading h1 {
@@ -125,6 +125,11 @@
     height: 100%;
     overflow: auto;
     padding-bottom: 60px;
+  }
+
+  :host >>> .mapboxgl-popup-hover h3 {
+    background-color: red !important;
+    text-align: center;
   }
   
   :host >>> .listings .item {
@@ -224,8 +229,27 @@
     padding: 1%;
   }
 
+  :host >>> .mapboxgl-popup-tip {
+    border-top-color: #0C5463;
+    color: #fff;;
+  }
+
+
   :host >>> .mapboxgl-popup {
     padding-bottom: 50px;
+    z-index: 1000000;
+  }
+
+  :host >>> .mapboxgl-popup p {
+    font-size: 16px;
+    text-align: center;
+    color:white;
+  }
+
+  :host >>> .mapboxgl-popup .pophov {
+    background-color: #0C5463;
+    height: auto;
+    padding: 20px 5px 5px;
   }
 
   :host >>> .marker {
@@ -252,8 +276,7 @@
 
   :host >>> #panta:hover {
     padding: 10px;
-    background-color: #00853e;
-    color: white;
+    color: orange;
     text-align: center;
   }
 

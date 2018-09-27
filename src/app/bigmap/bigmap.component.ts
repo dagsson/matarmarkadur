@@ -43,7 +43,7 @@ export class BigmapComponent implements OnInit {
       center: [this.lng, this.lat]
     });
 
-    map.scrollZoom.disable();
+    //map.scrollZoom.disable();
 
     var popup = new mapboxgl.Popup({
       closeButton: false,
@@ -658,8 +658,11 @@ var toggleableLayerIds = [ 'Nautgripir', 'Sauðfé', 'Þörungar', 'Hestar', 'Fi
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
+    var tabWrap = document.createElement('div');
     var foodicon = document.createElement('img');
     var link = document.createElement('a');
+    tabWrap.className = 'col-lg-1 col-md-2';
+    tabWrap.appendChild(link);
     link.textContent = id;
     link.appendChild(foodicon);
     link.style.display = "grid";

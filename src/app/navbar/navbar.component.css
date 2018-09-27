@@ -13,7 +13,7 @@
   #mainNav .navbar-brand {
     font-weight: 700;
     text-transform: uppercase;
-    color: #F05F40;
+    color: #28A743;
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   }
   
@@ -31,12 +31,12 @@
   
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #F05F40;
+    color: #28A743;
   }
   
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-    color: #F05F40 !important;
+    color: #28A743  !important;
     background-color: transparent;
   }
   
@@ -72,10 +72,10 @@
       background-color: #fff;
     }
     #mainNav.navbar-shrink .navbar-brand {
-      color: #F05F40;
+      color: #28A743;
     }
     #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-      color: #f05f40;
+      color: #28A743;
     }
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -83,6 +83,6 @@
     }
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
     #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-      color: #F05F40;
+      color: #28A743;
     }
   }

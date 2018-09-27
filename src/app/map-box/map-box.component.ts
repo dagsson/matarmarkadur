@@ -43,8 +43,15 @@ export class MapBoxComponent implements OnInit {
 
     var i = 0;
     var j = 1
-
     var router = this.router;
+
+    var popups = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+  });
+
+  var nav = new mapboxgl.NavigationControl();
+  map.addControl(nav, 'bottom-right');
 
     map.on('load', (event) => {
       map.addSource('farms', {
@@ -77,6 +84,16 @@ export class MapBoxComponent implements OnInit {
             var listing = document.getElementById('listing-' + i);
             listing.classList.add('active');
           });
+
+          el.addEventListener('mouseenter', function(e) {
+            console.log("hover beibí");
+            createPopUpHover(marker);
+          });
+
+          el.addEventListener('mouseleave', function(e) {
+            removePopUpHover(marker);
+          });
+          
       });
 
       buildLocationList(FARMS);
@@ -124,13 +141,26 @@ export class MapBoxComponent implements OnInit {
           .setHTML('<h3>' + currentFeature.properties.name + '</h3>' +
             '<h4 class="product">' + currentFeature.properties.products + '</h4>' +
             '<h4>' + currentFeature.properties.address + '</h4>' +
-            '<div id="panta">Skoða framleiðanda</div>'
+            '<div id="panta">Skoða nánar</div>'
           )
           .addTo(map);
           var order = document.getElementById('panta');    
           order.addEventListener('click', function(e) {
             router.navigate(['/farm/' + currentFeature.properties.id + '']);
           });
+      }
+
+      function createPopUpHover(currentFeature) {
+        var popUpsHover = document.getElementsByClassName('mapboxgl-hover');
+        if (popUpsHover[0]) popUpsHover[0].remove();
+       popups
+          .setLngLat(currentFeature.geometry.coordinates)
+          .setHTML('<div class="pophov"><p>' + currentFeature.properties.name + '</p></div>')
+          .addTo(map);
+      }
+
+      function removePopUpHover(currentFeature) {
+            popups.remove();
       }
     }     
   }
