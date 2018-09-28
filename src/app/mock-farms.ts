@@ -20,7 +20,7 @@ export const FARMS = {
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
               "products": "Handverk, sápur, púðar",
-              "img": "https://www.farmpower.com/Two%20cows.JPG"
+              "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -65,7 +65,7 @@ export const FARMS = {
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
             "products": "Bleikja - reyktar afurðir",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -87,7 +87,7 @@ export const FARMS = {
             "address": "Pura Natura, Ríp 3, Sauðárkróki",
             "zip": 551,
             "products": "Bætiefni úr lambalifur, innmat og jurtum",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -109,7 +109,7 @@ export const FARMS = {
             "address": "Keldudal, Sauðárkróki",
             "zip": 551,
             "products": "Kjöt, lamb og naut, gærur",
-            "img": "https://www.farmpower.com/Two%20cows.JPG"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -204,7 +204,7 @@ export const FARMS = {
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
             "products": "Útiræktað grænmeti",
-            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -249,7 +249,7 @@ export const FARMS = {
             "address": "Þverá, Varmahlíð",
             "zip": 561,
             "products": "Handverk úr hrosshárum, ull, handsútuđum gærum og smálambaskinni",
-            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -271,7 +271,7 @@ export const FARMS = {
             "address": "Sölvanesi, Varmahlíð",
             "zip": 561,
             "products": "Kjöt",
-            "img": "http://media.istockphoto.com/photos/driveway-and-red-barn-in-rural-york-county-pennsylvania-picture-id530661081?k=6&m=530661081&s=612x612&w=0&h=KUARkn72VtyN32w8gw0PnSL0EbB7E-6_GVpnnNQ1y48="
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -316,7 +316,7 @@ export const FARMS = {
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
             "products": "Harðfiskur, egg, (pylsur ofl.)",
-            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -338,7 +338,7 @@ export const FARMS = {
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
             "products": "Ferskur fiskur",
-            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -360,7 +360,7 @@ export const FARMS = {
             "address": "Molastaðir, Fljótum",
             "zip": 570,
             "products": "Andaregg",
-            "img": "http://spadantools.com/wp-content/uploads/2018/05/10-farm-uses-of-air-compressor.jpg"
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {
@@ -405,7 +405,7 @@ export const FARMS = {
             "address": "Akureyrarsvæðið",
             "zip": 601,
             "products": "Gulrætur ofl.",
-            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
+            "img": "../assets/img/IMG_7619.jpg"
             }
           },
           {

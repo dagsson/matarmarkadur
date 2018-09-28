@@ -47,7 +47,7 @@
                   <div class="modal-dialog modal-dialog-centered modal-products" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Listi yfir lambaskrokka</h5>
+                        <h6 class="modal-title" id="exampleModalCenterTitle">Bitarnir sem verða í boði: hryggvöðvar, innralærisvöðvar, flatsteik, læri, lambaskankar, framhryggsvöðvar (prime), lambabógur.</h6>
                         
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
@@ -72,9 +72,9 @@
                                 
                                 <tr *ngFor="let item of this.lambAndCarcass">
                                   <th scope="row">{{item.lambId}}</th>
-                                  <td>{{item.birthDate}}</td>
+                                  <td>{{item.birthDate | date:'d/M/yyyy' }}</td>
                                   <td>{{item.gender}}</td>
-                                  <td>25.09.2018</td>
+                                  <td>{{item.slaughterDate | date:'d/M/yyyy' }}</td>
                                   <td>{{item.weight}}</td>
                                   <td>{{item.rating}}</td>
                                   <td>{{item.fatCategory}}</td>
@@ -87,7 +87,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hætta við</button>
-                        <button type="button" class="btn btn-primary">Senda fyrirspurn með tölvupósti</button>
+                        <a href="mailto:raggalara@gmail.com?Subject=Bændamarkaður Hofsósi" class="btn btn-primary" target="_top">Senda fyrirspurn eða pöntun með tölvupósti</a>
                       </div>
                     </div>
                   </div>

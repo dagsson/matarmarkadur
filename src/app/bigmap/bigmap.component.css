@@ -19,23 +19,23 @@
 }
 
 .sidebar {
-    height: 25vh;
-    padding: 5% 19%;
+    height: 100px;
+    padding: 30px;
     text-align: center;
     font-family: source sans pro;
     background-color: rgb(247, 247, 247);
     color: rgb(37, 37, 37);
+    margin-top: 77px;
 }
 
 .map {
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     margin-top: 77px;
   }
 
 :host >>> .item {
     display: block;
-    border-bottom: 1px solid #eee;
     padding: 10px;
     text-decoration: none;
     font-family: 'Source Sans Pro';

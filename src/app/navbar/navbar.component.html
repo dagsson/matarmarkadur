@@ -15,9 +15,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/market" href="#portfolio">Bændamarkaður</a>
           </li>
-          <li class="nav-item" *ngIf="!(authService.user | async)">
+          <!--<li class="nav-item" *ngIf="!(authService.user | async)">
             <a routerLink="/login" class="nav-link" href="#contact">Vefverslun</a>
-          </li>
+          </li>-->
           <li class="nav-item" *ngIf="authService.user | async">
               <a (click)="logout()" class="nav-link" href="#contact">Útskráning</a>
             </li>
