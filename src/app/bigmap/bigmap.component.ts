@@ -658,28 +658,28 @@ var toggleableLayerIds = [ 'Nautgripir', 'Sauðfé', 'Þörungar', 'Hestar', 'Fi
 
 for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
-    var tabWrap = document.createElement('div');
+    var menu = document.getElementById('menu');
+    var item = menu.appendChild(document.createElement('div'));
+    item.id = 'listing-' + i;
     var foodicon = document.createElement('img');
-    var link = document.createElement('a');
-    tabWrap.className = 'col-lg-1 col-md-2';
-    tabWrap.appendChild(link);
+    item.appendChild(foodicon);
+    var link = item.appendChild(document.createElement('div'));
+    link.className = 'item';
+    
     link.textContent = id;
-    link.appendChild(foodicon);
-    link.style.display = "grid";
+    
     link.style.color = "black";
-    link.style.backgroundColor = "white";
-    link.style.padding = "15px";
+    //link.style.backgroundColor = "white";
+    //link.style.padding = "15px";
     link.style.fontFamily = "Source Sans Pro";
-    link.style.width = '90px';
+    //link.style.width = '90px';
     foodicon.setAttribute( 'src', tabImg[i]);
     foodicon.style.height = "25px";
     foodicon.style.margin = "10px auto 0px";
     foodicon.style.opacity = "0.3";
-    var features = map.getSource('skelfiskur');
     
     
-    link.onclick = function (e) {  
-      console.log(map.getSource('hross'));
+    item.onclick = function (e) {  
       var clickedLayer = this.textContent;
         e.preventDefault();
         e.stopPropagation();
@@ -700,7 +700,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
         }
     };
     
-    document.getElementById('menu').appendChild(link);  
+    document.getElementById('menu').appendChild(item);  
 }
 
 })

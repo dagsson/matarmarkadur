@@ -18,11 +18,33 @@
     margin-bottom: 30px;
 }
 
+.sidebar {
+    position: absolute;
+    width: 33.3333%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.map {
+    margin-top: 77px;
+    left: 33.3333%;
+    width: 66.6666%;
+    height: 90vh;
+  }
+
+  :host >>> .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Source Sans Pro';
+    color: #404040;
+    -webkit-font-smoothing: antialiased;
+}
+
 #menu {
-  display: -webkit-inline-box;
   margin-top: 50px;
   text-align: center;
-  display: -webkit-inline-box;
   cursor: pointer;
   margin-top: 18px !important;
   z-index: 100;
