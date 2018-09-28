@@ -12,7 +12,8 @@ import { BlockchainDataService} from '../blockchain-data.service';
 })
 export class FarmDetailComponent implements OnInit {
 
-  farmers:any = [];
+  lambs:any = [];
+  carcass:any = [];
 
   farm: any;
   constructor(
@@ -25,6 +26,7 @@ export class FarmDetailComponent implements OnInit {
   ngOnInit() {
     this.getFarm();
     this.getCarcass();
+    this.getLamb();
     window.scrollTo(0, 0);
   }
 
@@ -40,11 +42,22 @@ export class FarmDetailComponent implements OnInit {
 
   getCarcass(): void {
     //var info = this.blockchainService.getFarmer();
-    this.farmers = [];
-    this.blockchainService.getFarmer().subscribe((data: {})=>
+    this.carcass = [];
+    this.blockchainService.getCarcass().subscribe((data: {})=>
     {
       console.log(data);
-      this.farmers = data;
+      this.carcass = data;
+    })
+
+  }
+
+  getLamb(): void {
+    //var info = this.blockchainService.getFarmer();
+    this.lambs = [];
+    this.blockchainService.getLamb().subscribe((data: {})=>
+    {
+      console.log(data);
+      this.lambs = data;
     })
 
   }

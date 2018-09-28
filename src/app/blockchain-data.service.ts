@@ -25,6 +25,16 @@ export class BlockchainDataService {
     return this.http.get('../Farmer').pipe(
       map(this.extractData));
   }
+
+  getCarcass(): Observable<any> {
+    return this.http.get('../Carcass').pipe(
+      map(this.extractData));
+  }
+
+  getLamb(): Observable<any> {
+    return this.http.get('../Lamb').pipe(
+      map(this.extractData));
+  }
   
 }
 
