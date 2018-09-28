@@ -661,6 +661,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     var menu = document.getElementById('menu');
     var item = menu.appendChild(document.createElement('div'));
     item.id = 'listing-' + i;
+    item.className = 'listings';
     var foodicon = document.createElement('img');
     item.appendChild(foodicon);
     var link = item.appendChild(document.createElement('div'));
@@ -668,11 +669,11 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     
     link.textContent = id;
     
-    link.style.color = "black";
-    //link.style.backgroundColor = "white";
+    //link.style.color = "black";
+    item.style.backgroundColor = "white";
+    item.style.width = "9.09999%"
     //link.style.padding = "15px";
     link.style.fontFamily = "Source Sans Pro";
-    //link.style.width = '90px';
     foodicon.setAttribute( 'src', tabImg[i]);
     foodicon.style.height = "25px";
     foodicon.style.margin = "10px auto 0px";
@@ -689,7 +690,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
         if (visibility === 'none') {
             this.className = 'pp-tab';
             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-            this.style.color = "white";
+            this.style.color = "white !important";
             this.style.backgroundColor = bgColor;           
         } else {
             this.className = 'pp-tab active';
