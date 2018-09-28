@@ -20,6 +20,7 @@ import { HeroComponent } from './hero/hero.component';
 import { BigmapComponent } from './bigmap/bigmap.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule} from '@angular/common/http';
 import { MarketComponent } from './market/market.component';
 
 @NgModule({
@@ -35,15 +36,16 @@ import { MarketComponent } from './market/market.component';
     HeroComponent,
     BigmapComponent,
     FooterComponent,
-    AboutComponent,
-    MarketComponent
+    MarketComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
