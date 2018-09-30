@@ -34,7 +34,6 @@
   }
 
   .market_img_wrap img {
-    max-height: 550px;
     width: 100%;
   }
 
@@ -58,4 +57,7 @@
     width: 100%;
     background-color: #28A743;
     margin-top: 30px;
+    border-color: #28A743;
   }
+
+  

@@ -20,6 +20,7 @@ export const FARMS = {
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
               "products": "Handverk, sápur, púðar",
+              "info": "Ásta Búadóttir er handverkskona búsett á Sauðárkróki.",
               "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -65,7 +66,9 @@ export const FARMS = {
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
             "products": "Bleikja - reyktar afurðir",
+            "info": "Kokkhús á Hólum í Hjaltadal er smáfyrirtæki, rekið af Þórhildi Maríu Jónsdóttur, sem framleiðir reyktar afurðir úr bleikju. Mikil þróunarvinna í samstarfi við veitingastaðinn Undir Byrðunni á Hólum hefur átt sér stað varðandi kryddun og aðferðir. Á Hólum fara fram töluverðar rannsóknir á bleikju, svo sem kynbætur og er varða fóðrun fisksins.",
             "img": "../assets/img/IMG_7619.jpg"
+            
             }
           },
           {
@@ -79,14 +82,15 @@ export const FARMS = {
             },
             "properties": {
             "id": 4,
-            "name": "Pura Natura",
+            "name": "Pure Natura",
             "latitude": 65.67023333,
             "longitude": -19.44495,
             "producer": "Hildur Magnúsdóttir og Halldór B Gunnlaugsson",
             "phone": "8233231, 8993232",
-            "address": "Pura Natura, Ríp 3, Sauðárkróki",
+            "address": "Pure Natura, Ríp 3, Sauðárkróki",
             "zip": 551,
-            "products": "Bætiefni úr lambalifur, innmat og jurtum",
+            "products": "Bætiefni úr lambalifur og -hjörtum og villtum, íslenskum jurtum.",
+            "info": "Pure Natura er fyrirtæki rekið af Hildi Magnúsdóttur Ríp 3, Sauðárkróki, sem framleiðir bætiefni úr lambalifur og -hjörtum og villtum, íslenskum jurtum.", 
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -108,7 +112,8 @@ export const FARMS = {
             "phone": "8936231, 8468185",
             "address": "Keldudal, Sauðárkróki",
             "zip": 551,
-            "products": "Kjöt, lamb og naut, gærur",
+            "products": "Lambakjöt",
+            "info": "Hjónin Þórarinn Leifsson og Guðrún Lárusdóttir reka fjölbreyttan búskap í Keldudal, en þar hefur verið búið samfellt frá því um landnám á 9. öld. Frá bænum er víðsýnt um héraðið og fallegar gönguleiðir í kring.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -204,6 +209,7 @@ export const FARMS = {
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
             "products": "Útiræktað grænmeti",
+            "info": "Elínborg Erla Ásgeirsdóttir stundar útiræktun á grænmeti í Breiðargerði Varmahlíð.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -248,7 +254,8 @@ export const FARMS = {
             "phone": "8220264",
             "address": "Þverá, Varmahlíð",
             "zip": 561,
-            "products": "Handverk úr hrosshárum, ull, handsútuđum gærum og smálambaskinni",
+            "products": "Handverk",
+            "info": "Ólöf Ólafsdóttir vinnur handverk úr ull á Þverá, Varmahlíð.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -270,7 +277,8 @@ export const FARMS = {
             "phone": "8978068, 8918076",
             "address": "Sölvanesi, Varmahlíð",
             "zip": 561,
-            "products": "Kjöt",
+            "products": "Lambakjöt ofl.",
+            "info": "Hjónin Eydis Magnúsdóttir og Rúnar Máni Gunnarsson tóku við sauðfjárbúi og ferðaþjónustu í Sölvanesi í Fremribyggð, Varmahlíð, Skagafirði árið 2014 af foreldrum Eydísar. Þau eru jafnframt með nokkur hross, hunda, ketti, hænur og endur.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -315,7 +323,8 @@ export const FARMS = {
             "phone": "8495130",
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
-            "products": "Harðfiskur, egg, (pylsur ofl.)",
+            "products": "Harðfiskur, hænuegg ofl.",
+            "info": "Hjónin Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir reka býlið á Tjörnum, Hofsósi.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -337,7 +346,8 @@ export const FARMS = {
             "phone": "8480291 (ÞP), 8935727 (HH)",
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
-            "products": "Ferskur fiskur",
+            "products": "Afurðir úr rabarbara og fiskafurðir",
+            "info": "Júlía Þórunn Jónsdóttir og Þorgils Pálsson reka bú og ferðaþjónustu í Lónkoti, Hofsósi.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -360,6 +370,7 @@ export const FARMS = {
             "address": "Molastaðir, Fljótum",
             "zip": 570,
             "products": "Andaregg",
+            "info": "Halldór G Hálfdanarson og María Númadóttir reka sauðfjárbú á Molastöðum í Fljótum, Skagafirði.",
             "img": "../assets/img/IMG_7619.jpg"
             }
           },
@@ -427,7 +438,7 @@ export const FARMS = {
             "address": "Stóra-Dunhaga (Huldubúð)",
             "zip": 601,
             "products": "Pestó, sultur ofl.",
-            "img": "https://media.istockphoto.com/photos/traditional-american-red-farm-with-tractor-picture-id177938912?k=6&m=177938912&s=612x612&w=0&h=38_5wIiDf3OymBvo8K7b9TLH0IzbIgPq0qnkx4i1hJM="
+            "img": "../assets/img/IMG_7619.jpg"
             }
           }
         ]

@@ -47,13 +47,15 @@
                   <div class="modal-dialog modal-dialog-centered modal-products" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h6 class="modal-title" id="exampleModalCenterTitle">Bitarnir sem verða í boði: hryggvöðvar, innralærisvöðvar, flatsteik, læri, lambaskankar, framhryggsvöðvar (prime), lambabógur.</h6>
+                        <h4 class="modal-title" id="exampleModalCenterTitle">Listi yfir lambaskrokka frá Birkihlíð</h4>
                         
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="modal-body">
+                        <p style="text-align: left">Bitar sem verða í boði: hryggvöðvar, innralærisvöðvar, flatsteik, læri, lambaskankar, framhryggsvöðvar (prime), lambabógur.<br><br> <strong>Nánari upplýsingar um kjötmat má finna <a href="http://kjotbokin.is/">hér.</a></strong></p>
+                        <div class="table-responsive-md">
                           <table class="table table-hover">
                               <thead>
                                 <tr>
@@ -61,9 +63,9 @@
                                   <th scope="col">Fæðingard.</th>
                                   <th scope="col">Kyn</th>                             
                                   <th scope="col">Sláturd.</th>
-                                  <th scope="col">Fallþungi.</th>
-                                  <th scope="col">Vöðvaflokkur</th>
-                                  <th scope="col">Fituflokkur</th>
+                                  <th scope="col">Fallþungi (kg)</th>
+                                  <th scope="col">Vöðvafl.</th>
+                                  <th scope="col">Fitufl.</th>
                                   <th scope="col">Sláturstaður</th>
                                   <th scope="col">GPS</th>
                                 </tr>
@@ -73,7 +75,8 @@
                                 <tr *ngFor="let item of this.lambAndCarcass">
                                   <th scope="row">{{item.lambId}}</th>
                                   <td>{{item.birthDate | date:'d/M/yyyy' }}</td>
-                                  <td>{{item.gender}}</td>
+                                  <td *ngIf="item.gender == 'MALE'">Hrútur</td>
+                                  <td *ngIf="item.gender == 'FEMALE'">Gimbur</td>
                                   <td>{{item.slaughterDate | date:'d/M/yyyy' }}</td>
                                   <td>{{item.weight}}</td>
                                   <td>{{item.rating}}</td>
@@ -81,13 +84,15 @@
                                   <td>{{item.slaughterhouse}}</td>  
                                   <td>-</td>
                                 </tr>
+                               
                                 
                               </tbody>
                             </table>
+                          </div>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hætta við</button>
-                        <a href="mailto:raggalara@gmail.com?Subject=Bændamarkaður Hofsósi" class="btn btn-primary" target="_top">Senda fyrirspurn eða pöntun með tölvupósti</a>
+                        <a href="mailto:raggalara@gmail.com?Subject=Bændamarkaður Hofsósi" class="btn btn-primary" target="_top">Senda fyrirspurn<br>eða pöntun með tölvupósti</a>
                       </div>
                     </div>
                   </div>

@@ -31,7 +31,7 @@
 .map {
     width: 100%;
     height: 70vh;
-    margin-top: 77px;
+    margin-top: 35px;
   }
 
 :host >>> .item {
@@ -101,5 +101,15 @@
 }
 
 @media only screen and (max-width: 600px) {
+    :host >>> .item  {
+        display: none;
+    }
 
+    #menu {
+        height: 45px;
+    }
+
+    .sidebar {
+        height: 120px;
+    }
 }

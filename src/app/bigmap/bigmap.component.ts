@@ -15,7 +15,7 @@ export class BigmapComponent implements OnInit {
   private urls = ['https://api.mapbox.com/datasets/v1/dagsson/cjgxrynuy1nhn2wmoqz4sn8fu/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjgxsaekx0cdv33o8zncly704/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl8568s70jg12vlgnxyw0p9g/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjgxs7hoc07ly2wmx7wc7qjz9/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl84jijf0inv2uruidekzdw1/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl84fisc05zf2qnz5x84dgjx/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl848pqj0j0s2ql3t6s5ukg4/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl83jmld0j6m2vqkzr56ngw5/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl83gvwh0iwe2vrui3axviv4/features', 'https://api.mapbox.com/datasets/v1/dagsson/cjl83eiez0ivr2vrusczd8v9r/features'];
   map: mapboxgl.Map;
   style = 'mapbox://styles/dagsson/cj99p8osy3in82smvtx2ie7x8';
-  lat = 65.900529;
+  lat = 65.100129;
   lng = -19.018391;
 
   showDropDown = false;
@@ -28,7 +28,8 @@ export class BigmapComponent implements OnInit {
   constructor(private mapService: MapService) { }
 
   ngOnInit() {
-    this.initializeMap()
+    this.initializeMap();
+    window.scrollTo(0, 0);
   }
 
   private initializeMap() {
@@ -39,7 +40,7 @@ export class BigmapComponent implements OnInit {
     var map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
-      zoom: 5.55,
+      zoom: 4.90,
       center: [this.lng, this.lat]
     });
 
