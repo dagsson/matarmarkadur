@@ -17,11 +17,12 @@ export const FARMS = {
               "longitude": -19.63595,
               "producer": "Ásta Búadóttir",
               "phone": "8663974",
+              "email": "",
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
               "products": "Handverk, sápur, púðar",
               "info": "Ásta Búadóttir er handverkskona búsett á Sauðárkróki.",
-              "img": "../assets/img/IMG_7619.jpg"
+              "img": "../assets/img/image002.jpg"
             }
           },
           {
@@ -40,6 +41,7 @@ export const FARMS = {
                "longitude": -19.6484,
                "producer": "Pálmi Jónsson og María Eymundsdóttir",
                "phone": "8973580, 8474217",
+               "email": "",
                "address": "Skagfirðingabraut 7, Sauðarkróki - Hulduland í Hegranesi",
                "zip": 550,
                "products": "Hunang, saltfiskur, hákarl, siginn fiskur, varasalvi",
@@ -63,6 +65,7 @@ export const FARMS = {
             "longitude": -19.65171667,
             "producer": "Þórhildur M Jónsdóttir",
             "phone": "8636355",
+            "email": "",
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
             "products": "Bleikja - reyktar afurðir",
@@ -87,11 +90,12 @@ export const FARMS = {
             "longitude": -19.44495,
             "producer": "Hildur Magnúsdóttir og Halldór B Gunnlaugsson",
             "phone": "8233231, 8993232",
+            "email": "hildur@purenatura.is",
             "address": "Pure Natura, Ríp 3, Sauðárkróki",
             "zip": 551,
             "products": "Bætiefni úr lambalifur og -hjörtum og villtum, íslenskum jurtum.",
             "info": "Pure Natura er fyrirtæki rekið af Hildi Magnúsdóttur Ríp 3, Sauðárkróki, sem framleiðir bætiefni úr lambalifur og -hjörtum og villtum, íslenskum jurtum.", 
-            "img": "../assets/img/IMG_7619.jpg"
+            "img": "../assets/img/image003.jpg"
             }
           },
           {
@@ -110,6 +114,7 @@ export const FARMS = {
             "longitude": -19.47656667,
             "producer": "Þórarinn Leifsson og Guðrún Lárusdóttir",
             "phone": "8936231, 8468185",
+            "email": "",
             "address": "Keldudal, Sauðárkróki",
             "zip": 551,
             "products": "Lambakjöt",
@@ -136,6 +141,7 @@ export const FARMS = {
             "longitude": -19.61038333,
             "producer": "Þröstur Heiðar Erlingsson og Ragnheiður",
             "phone": "6905528",
+            "email": "raggalara@gmail.com",
             "address": "Birkihlíð, Staðahreppur, Sauðárkróki",
             "zip": 551,
             "products": "Lambakjöt ofl.",
@@ -159,6 +165,7 @@ export const FARMS = {
             "longitude": -19.35095,
             "producer": "Dagný Stefánsdóttir og Róbert Logi Jóhannesson",
             "phone": "8670247, 8988117",
+            "email": "",
             "address": "Laugarmýri, Varmahlíð",
             "zip": 561,
             "products": "Grænmeti, kryddjurtir og sumarblóm",
@@ -182,6 +189,7 @@ export const FARMS = {
             "longitude": -19.49953333,
             "producer": "Einar Eðvald Einarsson og Sólborg Una Pálsdóttir",
             "phone": "8921137, 4538101",
+            "email": "",
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
             "products": "Smyrsl og krem frá Gandi ",
@@ -206,6 +214,7 @@ export const FARMS = {
             "longitude": -19.18108333,
             "producer": "Elínborg Erla Ásgeirsdóttir",
             "phone": "8452828",
+            "email": "",
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
             "products": "Útiræktað grænmeti",
@@ -229,6 +238,7 @@ export const FARMS = {
             "longitude": -19.3327,
             "producer": "María Reykdal",
             "phone": "8636039",
+            "email": "",
             "address": "Starrastöðum, Varmahlíð",
             "zip": 561,
             "products": "Afskornar rósir",
@@ -252,6 +262,7 @@ export const FARMS = {
             "longitude": -19.37578333,
             "producer": "Ólöf Ólafsdóttir",
             "phone": "8220264",
+            "email": "",
             "address": "Þverá, Varmahlíð",
             "zip": 561,
             "products": "Handverk",
@@ -275,6 +286,7 @@ export const FARMS = {
             "longitude": -19.24831667,
             "producer": "Rúnar Máni Gunnarsson og Eydís Magnúsdóttir",
             "phone": "8978068, 8918076",
+            "email": "solvanes1@gmail.com",
             "address": "Sölvanesi, Varmahlíð",
             "zip": 561,
             "products": "Lambakjöt ofl.",
@@ -298,6 +310,7 @@ export const FARMS = {
             "longitude": -19.27126667,
             "producer": "Sigrun Helga Indrnameadottir",
             "phone": "8232441",
+            "email": "runalist@runalist.is",
             "address": "Stórhóll, Lýtingstaðahreppi, Varmahlíð",
             "zip": 561,
             "products": "Lambakjöt, kiðlingakjöt, ærkjöt, andaregg,ullar og leðurhandverk",
@@ -321,11 +334,12 @@ export const FARMS = {
             "longitude": -19.38921667,
             "producer": "Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir",
             "phone": "8495130",
+            "email": "",
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
             "products": "Harðfiskur, hænuegg ofl.",
             "info": "Hjónin Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir reka býlið á Tjörnum, Hofsósi.",
-            "img": "../assets/img/IMG_7619.jpg"
+            "img": "../assets/img/image001.jpg"
             }
           },
           {
@@ -344,6 +358,7 @@ export const FARMS = {
             "longitude": -19.40191667,
             "producer": "Þorgils Pálsson, Hjálmar Höskuldur Hjálmarsson, Sigurjón",
             "phone": "8480291 (ÞP), 8935727 (HH)",
+            "email": "",
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
             "products": "Afurðir úr rabarbara og fiskafurðir",
@@ -367,6 +382,7 @@ export const FARMS = {
             "longitude": -19.01241667,
             "producer": "María Þ Númadóttir og Halldór G Hálfdánarson",
             "phone": "8672035, 8963106, 4671021",
+            "email": "",
             "address": "Molastaðir, Fljótum",
             "zip": 570,
             "products": "Andaregg",
@@ -390,6 +406,7 @@ export const FARMS = {
             "longitude": -19.02241667,
             "producer": "Stefanía Hjördís Leifsdóttir og Jóhannes H Ríkharðsson",
             "phone": "8691024, 8511021",
+            "email": "",
             "address": "Brúnastöðum, Fljótum",
             "zip": 570,
             "products": "Andaregg, hænuegg, kornhænuegg, (geitaafurðir, geitaostar)",
@@ -413,6 +430,7 @@ export const FARMS = {
             "longitude": -18.1083,
             "producer": "Sigrún Héðinsdóttir og Jóhann Thorarensen",
             "phone": "8456716, 8987332, ",
+            "email": "",
             "address": "Akureyrarsvæðið",
             "zip": 601,
             "products": "Gulrætur ofl.",
@@ -435,10 +453,11 @@ export const FARMS = {
             "longitude": -18.28088333,
             "producer": "Hulda Arnsteinsdóttir",
             "phone": "8921718",
+            "email": "",
             "address": "Stóra-Dunhaga (Huldubúð)",
             "zip": 601,
             "products": "Pestó, sultur ofl.",
-            "img": "../assets/img/IMG_7619.jpg"
+            "img": "../assets/img/image005.jpg"
             }
           }
         ]

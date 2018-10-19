@@ -154,10 +154,10 @@ export class MapBoxComponent implements OnInit {
             '<h4>' + currentFeature.properties.address + '</h4>'
           )
           .addTo(map);
-          var order = document.getElementById('panta');    
-          order.addEventListener('click', function(e) {
-            router.navigate(['/farm/' + currentFeature.properties.id + '']);
-          });
+          //var order = document.getElementById('panta');    
+          //order.addEventListener('click', function(e) {
+          //  router.navigate(['/farm/' + currentFeature.properties.id + '']);
+          //});
       }
 
       function removePopUp() {

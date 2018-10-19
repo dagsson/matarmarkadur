@@ -33,8 +33,9 @@
             </div>
             <div class="buttons_wrapper">
             <button class="btn btn-primary"(click)="goBack()">Aftur á yfirlitssíðu</button>
+            <a href="mailto:{{farm.properties.email}}?Subject=Bændamarkaður Hofsósi" class="btn btn-primary fyrirspurn" target="_top">Senda fyrirspurn<br>með tölvupósti</a>
             <button *ngIf="farm.properties.id == 6" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                Skoða lambaskrokka<br> (gögn úr blockchain)
+              Skoða lambaskrokka<br> (gögn úr blockchain)
             </button>
           </div>
         </div>
@@ -54,7 +55,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <p style="text-align: left">Bitar sem verða í boði: hryggvöðvar, innralærisvöðvar, flatsteik, læri, lambaskankar, framhryggsvöðvar (prime), lambabógur.<br><br> <strong>Nánari upplýsingar um kjötmat má finna <a href="http://kjotbokin.is/">hér.</a></strong></p>
+                        <p style="text-align: left">Bitar sem voru í boði: hryggvöðvar, innralærisvöðvar, flatsteik, læri, lambaskankar, framhryggsvöðvar (prime), lambabógur. Viðkomandi vörur hafa ekki verið til sölu eftir að Bændamarkaðurinn Hofsósi fór fram þann 30. september 2018.<br><br> <strong>Nánari upplýsingar um kjötmat má finna <a href="http://kjotbokin.is/">hér.</a></strong></p>
                         <div class="table-responsive-md">
                           <table class="table table-hover">
                               <thead>
@@ -92,7 +93,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hætta við</button>
-                        <a href="mailto:raggalara@gmail.com?Subject=Bændamarkaður Hofsósi" class="btn btn-primary" target="_top">Senda fyrirspurn<br>eða pöntun með tölvupósti</a>
+                        <a href="mailto:raggalara@gmail.com?Subject=Bændamarkaður Hofsósi" class="btn btn-primary" target="_top">Senda fyrirspurn<br>með tölvupósti</a>
                       </div>
                     </div>
                   </div>
