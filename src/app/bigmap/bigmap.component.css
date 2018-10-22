@@ -1,0 +1,115 @@
+.menu-wrap {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  padding-top: 120px;
+}
+
+.menu-wrap p {
+    font-family: source sans pro;
+    color: #6c757d;
+}
+
+.menu-wrap h2 {
+    font-family: source sans pro;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    height: 100px;
+    padding: 30px;
+    text-align: center;
+    font-family: source sans pro;
+    background-color: rgb(247, 247, 247);
+    color: rgb(37, 37, 37);
+    margin-top: 77px;
+}
+
+.map {
+    width: 100%;
+    height: 70vh;
+    margin-top: 35px;
+  }
+
+:host >>> .item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Source Sans Pro';
+    color: #404040;
+    -webkit-font-smoothing: antialiased;
+}
+
+#menu {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0px;
+  margin-bottom: 0px;
+  display: -webkit-inline-box;
+  width: 100%;
+}
+
+#menu[_ngcontent-c1] > li {
+  cursor: pointer !important;
+}
+
+#menu > .list-group-item {
+  color: black !important;
+  border: none !important;
+  margin-bottom: none !important;
+}
+
+#menu[_ngcontent-c1] .list-group-item:first-child {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+#tabs {
+    position: absolute;
+    bottom: 0px !important;
+    z-index: 2;
+    text-align: center;
+    font-size: 14px;
+}
+  
+#menu[_ngcontent-c1] > li {
+    cursor: pointer !important;
+}
+  
+#menu > .list-group-item {
+    color: black !important;
+    border: none !important;
+    margin-bottom: none !important;
+}
+  
+#menu[_ngcontent-c1] .list-group-item:first-child {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+  
+#tabs {
+    position: absolute;
+    bottom: 0px !important;
+    z-index: 2;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    :host >>> .item  {
+        display: none;
+    }
+
+    #menu {
+        height: 45px;
+    }
+
+    .sidebar {
+        height: 120px;
+    }
+}

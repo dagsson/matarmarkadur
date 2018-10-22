@@ -1,0 +1,30 @@
+<h1 *ngIf="authService.user | async">Velkomin(n) {{ (authService.user | async)?.email }}!</h1>
+
+<div *ngIf="!(authService.user | async)" class="signup_wrap">
+    <div class="container signup_wrap">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">Nýskráning</h5>
+
+                  <div class="form-label-group">
+                    <input type="text" [(ngModel)]="email" id="inputEmail" class="form-control" placeholder="Netfang" required autofocus>
+    
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="password" [(ngModel)]="password" id="inputPassword" class="form-control" placeholder="Lykilorð" required>
+    
+                  </div>
+    
+                  <button (click)="signup()" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Nýskrá mig</button>
+                  <hr class="my-4">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+

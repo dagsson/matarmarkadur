@@ -1,0 +1,102 @@
+#farm-wrap {
+    text-align: center;
+    font-family: source sans pro;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.farm_info {
+    padding: 20px;
+    text-align: left;
+}
+
+.farm-img-wrap {
+    overflow: hidden;
+}
+
+.farmimg {
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
+    padding: 0px;
+}
+
+.buttons_wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.buttons_wrapper button {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.buttons_wrapper button:hover {
+    background-color: #175324;
+    border-color: #175324;
+}
+
+.btn-primary {
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+#farm-wrap img {
+    height: auto;
+    width: 100%;
+    background-position: center;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
+}
+
+#farm-wrap button {
+    margin-right: 15px;
+}
+
+#farm-wrap h2 {
+    letter-spacing: 2.5px;
+    font-weight: bolder;
+    margin: 0px;
+}
+
+.farm_heading_wrap {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+}
+
+.farm_practical {
+    padding: 20px;
+}
+
+.farm_practical span {
+    font-size: 14px;
+    color: lightgray;
+}
+
+.farm_practical h4 {
+    text-align: left;
+    font-size: 18px;
+}
+
+.modal-products {
+    max-width: 90%;
+}
+
+.farm_mainimg, .farm_details {
+    padding: 7% 2%;
+}
+
+.fyrirspurn {
+    margin-right: 15px;
+}
+
+
+@media (max-width: 768px) {
+
+    .farm_info {
+        padding-top: 60px;
+    }
+    .btn {
+        width: 100%;
+    }
+}
