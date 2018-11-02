@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BigmapComponent } from './bigmap.component';
 
-describe('BigmapComponent', () => {
-  let component: BigmapComponent;
-  let fixture: ComponentFixture<BigmapComponent>;
+import { MainmapComponent } from './mainmap.component';
+
+describe('MainmapComponent', () => {
+  let component: MainmapComponent;
+  let fixture: ComponentFixture<MainmapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BigmapComponent ]
+      declarations: [ MainmapComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BigmapComponent);
+    fixture = TestBed.createComponent(MainmapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

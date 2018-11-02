@@ -23,6 +23,9 @@ import { AboutComponent } from './about/about.component';
 import { HttpClientModule} from '@angular/common/http';
 import { MarketComponent } from './market/market.component';
 
+import { IssueService } from './issue.service';
+import { MainmapComponent } from './mainmap/mainmap.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,8 @@ import { MarketComponent } from './market/market.component';
     BigmapComponent,
     FooterComponent,
     MarketComponent,
-    AboutComponent
+    AboutComponent,
+    MainmapComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,7 @@ import { MarketComponent } from './market/market.component';
     AngularFireAuthModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, IssueService],
   bootstrap: [AppComponent]
 })
 

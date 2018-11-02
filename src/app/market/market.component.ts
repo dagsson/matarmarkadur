@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IssueService } from '../issue.service';
 
 @Component({
   selector: 'app-market',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketComponent implements OnInit {
 
-  constructor() { }
+  constructor(private issueService: IssueService) { }
 
   ngOnInit() {
-    window.scrollTo(0, 0);
+    this.issueService.getIssues().subscribe((issues) => {
+      console.log(issues);
+    }) 
   }
-
 }

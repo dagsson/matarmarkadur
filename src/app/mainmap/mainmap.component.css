@@ -1,0 +1,20 @@
+.map {
+    width: 67.7777777%;
+    height: 100vh;
+    margin-top: 35px;
+    left: 33.33333333%;
+  }
+
+  #sheep_btn {
+    z-index: 10000000;
+    position: absolute;
+    top: 25%;
+  }
+
+#menu {
+  width: 33.33333333%;
+  height: 100%;
+  background-color: #545b62;
+  position: absolute;
+  z-index: 1;
+}
