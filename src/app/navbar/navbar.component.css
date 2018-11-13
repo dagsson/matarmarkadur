@@ -2,6 +2,7 @@
     height: 50px;
 }
 
+<<<<<<< HEAD
 .navbar-toggler {
   border-color: white !important;
 }
@@ -10,6 +11,8 @@
   text-align: center;
 }
 
+=======
+>>>>>>> origin/master
 #mainNav {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
     background-color: #fff;

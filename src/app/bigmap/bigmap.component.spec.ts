@@ -1,4 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 import { BigmapComponent } from './bigmap.component';
 
 describe('BigmapComponent', () => {

@@ -17,7 +17,11 @@ export const FARMS = {
               "longitude": -19.63595,
               "producer": "Ásta Búadóttir",
               "phone": "8663974",
+<<<<<<< HEAD
               "email": "asta@fjolnet.is",
+=======
+              "email": "",
+>>>>>>> origin/master
               "address": "Smáragrund 13, Sauðárkróki",
               "zip": 550,
               "products": "Handverk, sápur, púðar",
@@ -41,6 +45,10 @@ export const FARMS = {
                "longitude": -19.6484,
                "producer": "Pálmi Jónsson og María Eymundsdóttir",
                "phone": "8973580, 8474217",
+<<<<<<< HEAD
+=======
+               "email": "",
+>>>>>>> origin/master
                "address": "Skagfirðingabraut 7, Sauðarkróki - Hulduland í Hegranesi",
                "zip": 550,
                "products": "Hunang, saltfiskur, hákarl, siginn fiskur, varasalvi",
@@ -64,7 +72,11 @@ export const FARMS = {
             "longitude": -19.65171667,
             "producer": "Þórhildur M Jónsdóttir",
             "phone": "8636355",
+<<<<<<< HEAD
             "email": "thorhildur@holar.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Raftahlíð 78, Sauðárkróki (Kokkhús Hólum í Hjaltadal)",
             "zip": 550,
             "products": "Bleikja - reyktar afurðir",
@@ -113,8 +125,13 @@ export const FARMS = {
             "longitude": -19.47656667,
             "producer": "Þórarinn Leifsson og Guðrún Lárusdóttir",
             "phone": "8936231, 8468185",
+<<<<<<< HEAD
             "address": "Keldudal, Sauðárkróki",
             "email": "keldudalur@keldudalur.is",
+=======
+            "email": "",
+            "address": "Keldudal, Sauðárkróki",
+>>>>>>> origin/master
             "zip": 551,
             "products": "Lambakjöt",
             "info": "Hjónin Þórarinn Leifsson og Guðrún Lárusdóttir reka fjölbreyttan búskap í Keldudal, en þar hefur verið búið samfellt frá því um landnám á 9. öld. Frá bænum er víðsýnt um héraðið og fallegar gönguleiðir í kring.",
@@ -164,7 +181,11 @@ export const FARMS = {
             "longitude": -19.35095,
             "producer": "Dagný Stefánsdóttir og Róbert Logi Jóhannesson",
             "phone": "8670247, 8988117",
+<<<<<<< HEAD
             "email": "laugarmyri@laugarmyri.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Laugarmýri, Varmahlíð",
             "zip": 561,
             "products": "Grænmeti, kryddjurtir og sumarblóm",
@@ -188,7 +209,11 @@ export const FARMS = {
             "longitude": -19.49953333,
             "producer": "Einar Eðvald Einarsson og Sólborg Una Pálsdóttir",
             "phone": "8921137, 4538101",
+<<<<<<< HEAD
             "email": "gandur@gandur.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Syðra-Skörðugili, Varmahlíð",
             "zip": 561,
             "products": "Smyrsl og krem frá Gandi ",
@@ -213,6 +238,10 @@ export const FARMS = {
             "longitude": -19.18108333,
             "producer": "Elínborg Erla Ásgeirsdóttir",
             "phone": "8452828",
+<<<<<<< HEAD
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Breiðargerði, Varmahlíð",
             "zip": 561,
             "products": "Útiræktað grænmeti",
@@ -236,7 +265,11 @@ export const FARMS = {
             "longitude": -19.3327,
             "producer": "María Reykdal",
             "phone": "8636039",
+<<<<<<< HEAD
             "email": "mreykdal@simnet.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Starrastöðum, Varmahlíð",
             "zip": 561,
             "products": "Afskornar rósir",
@@ -260,6 +293,10 @@ export const FARMS = {
             "longitude": -19.37578333,
             "producer": "Ólöf Ólafsdóttir",
             "phone": "8220264",
+<<<<<<< HEAD
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Þverá, Varmahlíð",
             "zip": 561,
             "products": "Handverk",
@@ -331,7 +368,11 @@ export const FARMS = {
             "longitude": -19.38921667,
             "producer": "Kjartan Þór Kjartansson og Sigurlaug Kristín Eymundsdóttir",
             "phone": "8495130",
+<<<<<<< HEAD
             "email": "tjarnir@gmail.com",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Tjörnum, Hofsósi",
             "zip": 566,
             "products": "Harðfiskur, hænuegg ofl.",
@@ -355,7 +396,11 @@ export const FARMS = {
             "longitude": -19.40191667,
             "producer": "Þorgils Pálsson, Hjálmar Höskuldur Hjálmarsson, Sigurjón",
             "phone": "8480291 (ÞP), 8935727 (HH)",
+<<<<<<< HEAD
             "email": "lonkot@lonkot.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Lónkoti, Hofsósi (ÞP)",
             "zip": 566,
             "products": "Afurðir úr rabarbara og fiskafurðir",
@@ -379,6 +424,10 @@ export const FARMS = {
             "longitude": -19.01241667,
             "producer": "María Þ Númadóttir og Halldór G Hálfdánarson",
             "phone": "8672035, 8963106, 4671021",
+<<<<<<< HEAD
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Molastaðir, Fljótum",
             "zip": 570,
             "products": "Andaregg",
@@ -402,7 +451,11 @@ export const FARMS = {
             "longitude": -19.02241667,
             "producer": "Stefanía Hjördís Leifsdóttir og Jóhannes H Ríkharðsson",
             "phone": "8691024, 8511021",
+<<<<<<< HEAD
             "email": "bruna@simnet.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Brúnastöðum, Fljótum",
             "zip": 570,
             "products": "Andaregg, hænuegg, kornhænuegg, (geitaafurðir, geitaostar)",
@@ -426,6 +479,10 @@ export const FARMS = {
             "longitude": -18.1083,
             "producer": "Sigrún Héðinsdóttir og Jóhann Thorarensen",
             "phone": "8456716, 8987332, ",
+<<<<<<< HEAD
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Akureyrarsvæðið",
             "zip": 601,
             "products": "Gulrætur ofl.",
@@ -448,7 +505,11 @@ export const FARMS = {
             "longitude": -18.28088333,
             "producer": "Hulda Arnsteinsdóttir",
             "phone": "8921718",
+<<<<<<< HEAD
             "email": "huldubud@internet.is",
+=======
+            "email": "",
+>>>>>>> origin/master
             "address": "Stóra-Dunhaga (Huldubúð)",
             "zip": 601,
             "products": "Pestó, sultur ofl.",

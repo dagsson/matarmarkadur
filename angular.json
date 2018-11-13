@@ -26,7 +26,10 @@
               "src/styles.css"
             ],
             "scripts": [
+<<<<<<< HEAD
               "./node_modules/jquery/dist/jquery.min.js"
+=======
+>>>>>>> origin/master
             ]
           },
           "configurations": {

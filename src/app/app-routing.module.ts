@@ -9,10 +9,13 @@ import { HeroComponent } from './hero/hero.component';
 import { BigmapComponent } from './bigmap/bigmap.component';
 import { AboutComponent } from './about/about.component';
 import { MarketComponent } from './market/market.component';
+<<<<<<< HEAD
 import { MainmapComponent } from './mainmap/mainmap.component';
 import { CreateFarmComponent } from './create-farm/create-farm.component';
 import { EditFarmComponent } from './edit-farm/edit-farm.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+=======
+>>>>>>> origin/master
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,11 +27,15 @@ const routes: Routes = [
   { path: 'home', component: HeroComponent },
   { path: 'matarlandslag', component: BigmapComponent },
   { path: 'about', component: AboutComponent },
+<<<<<<< HEAD
   { path: 'market', component: MarketComponent },
   { path: 'mainmap', component: MainmapComponent },
   { path: 'create', component: CreateFarmComponent },
   { path: 'edit/:id', component: EditFarmComponent },
   { path: 'welcome', component: WelcomeComponent }
+=======
+  { path: 'market', component: MarketComponent }
+>>>>>>> origin/master
 ];
 
 @NgModule({

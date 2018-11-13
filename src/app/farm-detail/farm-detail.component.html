@@ -33,7 +33,11 @@
             </div>
             <div class="buttons_wrapper">
             <button class="btn btn-primary"(click)="goBack()">Aftur á yfirlitssíðu</button>
+<<<<<<< HEAD
             <a *ngIf="farm.properties.email"href="mailto:{{farm.properties.email}}?Subject=Bændamarkaður Hofsósi" class="btn btn-primary fyrirspurn" target="_top">Senda fyrirspurn</a>
+=======
+            <a href="mailto:{{farm.properties.email}}?Subject=Bændamarkaður Hofsósi" class="btn btn-primary fyrirspurn" target="_top">Senda fyrirspurn<br>með tölvupósti</a>
+>>>>>>> origin/master
             <button *ngIf="farm.properties.id == 6" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
               Skoða lambaskrokka<br> (gögn úr blockchain)
             </button>

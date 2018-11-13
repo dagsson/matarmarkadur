@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+<<<<<<< HEAD
 declare var $ : any;
+=======
+>>>>>>> origin/master
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +12,10 @@ declare var $ : any;
 })
 export class NavbarComponent implements OnInit {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
   constructor(public authService: AuthService) { }
 
   logout() {
@@ -17,11 +23,14 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
     $(document).ready(function () {
       $(".navbar-nav li a").click(function(event) {
         $(".navbar-collapse").collapse('hide');
       });
     });
+=======
+>>>>>>> origin/master
   }
 
 }

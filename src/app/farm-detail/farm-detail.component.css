@@ -17,12 +17,19 @@
 
 .farmimg {
     overflow: hidden;
+<<<<<<< HEAD
     box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
     padding: 0px;
 }
 
 .buttons_wrapper {
     text-align: center;
+=======
+}
+
+.buttons_wrapper {
+    text-align: left;
+>>>>>>> origin/master
     padding: 20px;
 }
 
@@ -36,6 +43,7 @@
     border-color: #175324;
 }
 
+<<<<<<< HEAD
 .btn-primary {
     width: 45%;
     margin-bottom: 15px;
@@ -46,6 +54,12 @@
     width: 100%;
     background-position: center;
     box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
+=======
+#farm-wrap img {
+    height: 600px;
+    width: auto;
+    background-position: center; 
+>>>>>>> origin/master
 }
 
 #farm-wrap button {
@@ -88,6 +102,7 @@
 
 .fyrirspurn {
     margin-right: 15px;
+<<<<<<< HEAD
 }
 
 
@@ -99,4 +114,6 @@
     .btn {
         width: 100%;
     }
+=======
+>>>>>>> origin/master
 }
