@@ -5,7 +5,7 @@
     left: 33.33333333%;
   }
 
-  #sheep_btn {
+#sheep_btn {
     z-index: 10000000;
     position: absolute;
     top: 25%;
@@ -14,7 +14,34 @@
 #menu {
   width: 33.33333333%;
   height: 100%;
-  background-color: #545b62;
+  background-color: #fbfbfb;
   position: absolute;
   z-index: 1;
+  overflow: scroll;
+  padding-top: 100px;
+}
+
+.control_panel {
+  padding: 15px;
+  font-family: source sans pro;
+}
+
+.btn-wrap {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+th {
+  font-family: source sans pro;
+}
+
+td {
+  font-size: 16px;
+  vertical-align: middle;
+  font-family: source sans pro;
+}
+
+td button {
+  font-size: 0.8rem;
 }

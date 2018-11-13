@@ -1,0 +1,174 @@
+<div class="new-farm-wrapper">
+    <br>
+    <div class="form-wrapper">
+            <div class="row">
+                    <div class="col-md-6">
+                        <h3>Upplýsingar um framleiðanda</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-info" routerLink="/mainmap">Til baka</button>
+                    </div>
+            </div>
+      <br>
+
+      <form [formGroup]="createForm" class="create-form form-group">
+        <div class="form-row">
+          <div class="form-group col-md-3 mb-12">
+                <label>Framleiðslunúmer</label>
+                <input class="form-control" formControlName="ID">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 mb-12">
+              <label>Nafn framleiðanda</label>
+              <input type="text" class="form-control" formControlName="Name">
+          </div>
+          <div class="form-group col-md-6 mb-12">
+              <label>Heimilisfang</label>
+              <input class="form-control" formControlName="Place">
+          </div>
+        </div>
+        <div class="form-row">
+                <div class="form-group col-md-6 mb-12">
+                    <label>Póstnúmer</label>
+                    <input type="text" class="form-control" formControlName="areaCode">
+                </div>
+                <div class="form-group col-md-6 mb-12">
+                    <label>Landshluti</label>
+                    <select class="form-control" formControlName="area">
+                            <option>Vesturumdæmi</option>
+                            <option>Norðvesturumdæmi</option>
+                            <option>Norðausturumdæmi</option>
+                            <option>Suðurumdæmi</option>
+                          </select>
+                </div>
+              </div>
+        <div class="form-row"> 
+        <div class="form-group col-md-6 mb-12">
+            <label>Vara</label>
+            <input class="form-control" formControlName="Product">
+        </div>    
+        <div class="form-group col-md-6 mb-12">
+            <label>Aðrar vörur</label>
+            <input class="form-control" formControlName="ProductII">
+        </div>
+        </div>
+        
+        <div class="form-row">
+                <div class="form-group col-md-3 mb-12">
+                        <label>Aðalstarfsemi</label>
+                        <select class="form-control" formControlName="Type">
+                            <option>Nautgripir</option>
+                            <option>Sauðfé</option>
+                            <option>Þörungar</option>
+                            <option>Hestar</option>
+                            <option>Fiskeldi</option>
+                            <option>Alifuglar</option>
+                            <option>Afli</option>
+                            <option>Geitur</option>
+                            <option>Matjurtir</option>
+                            <option>Svín</option>
+                            <option>Skelfiskur</option>
+                          </select>
+                    </div>
+                    <div class="form-group col-md-3 mb-12">
+                        <label>Önnur starfsemi</label>
+                        <select class="form-control" formControlName="TypeII">
+                            <option>Nautgripir</option>
+                            <option>Sauðfé</option>
+                            <option>Þörungar</option>
+                            <option>Hestar</option>
+                            <option>Fiskeldi</option>
+                            <option>Alifuglar</option>
+                            <option>Afli</option>
+                            <option>Geitur</option>
+                            <option>Matjurtir</option>
+                            <option>Svín</option>
+                            <option>Skelfiskur</option>
+                          </select>
+                    </div> 
+                    <div class="form-group col-md-3 mb-12">
+                        <label>Önnur starfsemi</label>
+                        <select class="form-control" formControlName="TypeIII">
+                            <option>Nautgripir</option>
+                            <option>Sauðfé</option>
+                            <option>Þörungar</option>
+                            <option>Hestar</option>
+                            <option>Fiskeldi</option>
+                            <option>Alifuglar</option>
+                            <option>Afli</option>
+                            <option>Geitur</option>
+                            <option>Matjurtir</option>
+                            <option>Svín</option>
+                            <option>Skelfiskur</option>
+                          </select>
+                    </div> 
+                    <div class="form-group col-md-3 mb-12">
+                        <label>Önnur starfsemi</label>
+                        <select class="form-control" formControlName="TypeIV">
+                            <option>Nautgripir</option>
+                            <option>Sauðfé</option>
+                            <option>Þörungar</option>
+                            <option>Hestar</option>
+                            <option>Fiskeldi</option>
+                            <option>Alifuglar</option>
+                            <option>Afli</option>
+                            <option>Geitur</option>
+                            <option>Matjurtir</option>
+                            <option>Svín</option>
+                            <option>Skelfiskur</option>
+                          </select>
+                    </div>        
+          </div>
+          <div class="form-row">
+                <div class="form-group col-md-4">
+                        <label for="inputState">Beint frá býli</label>
+                        <select id="inputState" class="form-control" formControlName="fm">
+                          <option>Já</option>
+                          <option>Nei</option>
+                        </select>
+                </div>
+                <div class="form-group col-md-4">
+                        <label for="inputState">Lífræn vottun</label>
+                        <select id="inputState" class="form-control" formControlName="Vottun">
+                          <option>Já</option>
+                          <option>Nei</option>
+                        </select>
+                </div>
+          </div>
+          <div class="form-row">  
+                <div class="form-group col-md-6 mb-12"> 
+                  <div class="form-group">
+                      <label>Netfang</label>
+                      <input type="email" class="form-control" formControlName="email">
+                  </div>
+                </div>
+                <div class="form-group col-md-6 mb-12">     
+                  <div class="form-group">
+                      <label>Sími</label>
+                      <input class="form-control" formControlName="phone">
+                  </div>
+                </div>
+              </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Texti um framleiðsluna</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="about"></textarea>
+        </div>
+        <div class="form-row">  
+        <div class="form-group col-md-6 mb-12">
+            <label>Hnit (lat)</label>
+            <input class="form-control" formControlName="lat">
+        </div>
+        <div class="form-group col-md-6 mb-12">
+            <label>Hnit (long)</label>
+            <input class="form-control" formControlName="lon">
+        </div>
+        </div>         
+        <br><br>
+        <button class="btn btn-info" routerLink="/mainmap">Hætta við</button>
+        <button class="btn btn-primary" type="submit" (click)="addFarm(createForm.value)">Vista framleiðanda</button>
+        <!--<button class="btn btn-primary" type="submit" (click)="addFarm(createForm.controls.ID.value, createForm.controls.Name.value, createForm.controls.Place.value, createForm.controls.Product.value, createForm.controls.ProductII.value, createForm.controls.Type.value, createForm.controls.Vottun.value, createForm.controls.fm.value, createForm.controls.email.value, createForm.controls.phone.value, createForm.controls.about.value, createForm.controls.lan.value, createForm.controls.lon.value)">Vista framleiðanda</button>-->
+        
+      </form>
+    </div>
+</div>

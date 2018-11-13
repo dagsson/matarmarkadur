@@ -1,10 +1,31 @@
 <div id='menu'>
-  <div class="btn-group mr-2" role="group" aria-label="First group">
-    <button type="button" class="btn btn-primary">Sauðfé</button>
-    <button type="button" class="btn btn-secondary">Nautgripir</button>
-    <button type="button" class="btn btn-secondary">Svín</button>
-    <button type="button" class="btn btn-secondary">Matjurtir</button>
+  <div class="control_panel">
+    <input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" id="leit" [(ngModel)]="term">
+    <div class="btn-wrap"><button class="btn btn-info btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
+    <div *ngIf="featureCollection.features.length > 0" class="table-responsive-md">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Framleiðandi</th>
+                <th scope="col"></th>
+                <th scope="col"></th>                           
+              </tr>
+            </thead>
+            <tbody>    
+              <tr *ngFor="let item of featureCollection.features | filter:term ">
+                <td>{{item.properties.name}}</td>
+                <td>
+                  <button class="btn btn-outline-secondary inline" (click)="editFarm(item._id)">Breyta</button>
+                  
+                </td>
+                <td>
+                  <button class="btn btn-outline-danger inline" (click)="deleteFarm(item._id)">Eyða</button>
+                </td>
+              </tr>        
+            </tbody>
+        </table>
+      </div>
   </div>
 </div>
-<div id="map" class="map">
-</div>
+
+<div id="map" class="map"></div>

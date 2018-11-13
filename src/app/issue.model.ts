@@ -1,18 +1,15 @@
-export interface Farm {
-    "id": String,
-    "type": "Feature";
-    "properties": {
-        "id": String,
-        "type": String,
-        "place": String,
-        "name": String,
-        "area": String,
-        "product": String,
-    }
-    "geometry": {
-        "coordinates": [
-            number, number
-        ],
-        "type": "Point"
+import { mongoose } from 'mongoose';
+
+const Schema = mongoose.Schema;
+
+export let Issue = new Schema({
+    type: {
+        type: String
     },
-}
+    properties: {
+        type: Object
+    },
+    geometry: {
+        type: Object
+    }
+});

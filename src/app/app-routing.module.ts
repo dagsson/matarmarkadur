@@ -10,6 +10,9 @@ import { BigmapComponent } from './bigmap/bigmap.component';
 import { AboutComponent } from './about/about.component';
 import { MarketComponent } from './market/market.component';
 import { MainmapComponent } from './mainmap/mainmap.component';
+import { CreateFarmComponent } from './create-farm/create-farm.component';
+import { EditFarmComponent } from './edit-farm/edit-farm.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,7 +25,10 @@ const routes: Routes = [
   { path: 'matarlandslag', component: BigmapComponent },
   { path: 'about', component: AboutComponent },
   { path: 'market', component: MarketComponent },
-  { path: 'mainmap', component: MainmapComponent }
+  { path: 'mainmap', component: MainmapComponent },
+  { path: 'create', component: CreateFarmComponent },
+  { path: 'edit/:id', component: EditFarmComponent },
+  { path: 'welcome', component: WelcomeComponent }
 ];
 
 @NgModule({

@@ -4,6 +4,8 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthService } from './auth.service';
 
@@ -22,9 +24,21 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule} from '@angular/common/http';
 import { MarketComponent } from './market/market.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { IssueService } from './issue.service';
 import { MainmapComponent } from './mainmap/mainmap.component';
+import { CreateFarmComponent } from './create-farm/create-farm.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { EditFarmComponent } from './edit-farm/edit-farm.component';
+import { FilterPipe } from 'src/app/farmfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -41,15 +55,28 @@ import { MainmapComponent } from './mainmap/mainmap.component';
     FooterComponent,
     MarketComponent,
     AboutComponent,
-    MainmapComponent
+    MainmapComponent,
+    CreateFarmComponent,
+    WelcomeComponent,
+    EditFarmComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTableModule,
+    MatChipsModule,
+    MatCheckboxModule
   ],
   providers: [AuthService, IssueService],
   bootstrap: [AppComponent]

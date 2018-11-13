@@ -1,0 +1,17 @@
+.create-form {
+    min-width: 150px;
+    width: 100%;
+}
+
+.field-full-width {
+    width: 100%;
+}
+
+.form-wrapper {
+    padding: 10% 15%;
+    font-family: source sans pro;
+}
+
+.btn-info {
+    margin-right: 30px;
+}

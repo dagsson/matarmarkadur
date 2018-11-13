@@ -12,7 +12,6 @@ export class MarketComponent implements OnInit {
 
   ngOnInit() {
     this.issueService.getIssues().subscribe((issues) => {
-      console.log(issues);
     }) 
   }
 }

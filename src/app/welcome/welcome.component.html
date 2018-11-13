@@ -1,0 +1,13 @@
+<div class="welcome_wrap">
+  
+<div class="welcome_note">
+  <h1 *ngIf="authService.user | async">Velkomin(n) {{ (authService.user | async)?.email }}!</h1>
+  <p>Þú ert skráður inn á Matarlandslagið. Ef þú lendir í vandræðum hér inni geturðu sent póst á thormodur@matis.is og við göngum í málið.</p>
+</div>
+
+<div class="button_wrapper">
+<button mat-button [routerLink]="['/home']">Fara á forsíðu</button>
+<button mat-button [routerLink]="['/login']">Útskrá</button>
+</div>
+
+</div>

@@ -15,12 +15,16 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/market" href="#portfolio">Bændamarkaður</a>
           </li>
-          <!--<li class="nav-item" *ngIf="!(authService.user | async)">
-            <a routerLink="/login" class="nav-link" href="#contact">Vefverslun</a>
-          </li>-->
+          <li class="nav-item" *ngIf="!(authService.user | async)">
+            <a routerLink="/login" class="nav-link">Innskráning</a>
+          </li>
           <li class="nav-item" *ngIf="authService.user | async">
-              <a (click)="logout()" class="nav-link" href="#contact">Útskráning</a>
+              <a routerLink="/mainmap" class="nav-link">Vinnusvæði</a>
+          </li>
+          <li class="nav-item" *ngIf="authService.user | async">
+              <a (click)="logout()" class="nav-link">Útskráning</a>
             </li>
+          
         </ul>
       </div>
     </div>
