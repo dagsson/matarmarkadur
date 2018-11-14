@@ -107,18 +107,13 @@
     height: 90vh;
   }
   
-<<<<<<< HEAD
   .part_heading, part_heading_ {
-=======
-  .part_heading {
->>>>>>> origin/master
     background: #fff;
     border-bottom: 1px solid #eee;
     line-height: 60px;
     background-color: #0C5463;
   }
 
-<<<<<<< HEAD
   .part_heading_mobile {
     background: #fff;
     border-bottom: 1px solid #eee;
@@ -129,8 +124,6 @@
     width: 100%;
   }
 
-=======
->>>>>>> origin/master
   .part_heading h1 {
     color: white;
     padding: 25px;
@@ -159,13 +152,10 @@
     color: #404040;
     -webkit-font-smoothing: antialiased;
   }
-<<<<<<< HEAD
 
   :host >>> .listings .item a {
     cursor: pointer;
   }
-=======
->>>>>>> origin/master
   
   :host >>> .listings .item:last-child { border-bottom: none; }
   
@@ -335,7 +325,6 @@ header.masthead {
   header.masthead p {
     font-weight: 300;
   }
-<<<<<<< HEAD
 
   @media (max-width: 768px) {
     .part_heading {
@@ -351,8 +340,6 @@ header.masthead {
       border: none;
     }
   }
-=======
->>>>>>> origin/master
   
   @media (min-width: 768px) {
     header.masthead p {

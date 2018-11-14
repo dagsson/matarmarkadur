@@ -4,11 +4,8 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-=======
->>>>>>> origin/master
 
 import { AuthService } from './auth.service';
 
@@ -27,7 +24,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule} from '@angular/common/http';
 import { MarketComponent } from './market/market.component';
-<<<<<<< HEAD
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
@@ -35,6 +31,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { IssueService } from './issue.service';
@@ -43,8 +40,6 @@ import { CreateFarmComponent } from './create-farm/create-farm.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { EditFarmComponent } from './edit-farm/edit-farm.component';
 import { FilterPipe } from 'src/app/farmfilter.pipe';
-=======
->>>>>>> origin/master
 
 @NgModule({
   declarations: [
@@ -60,7 +55,6 @@ import { FilterPipe } from 'src/app/farmfilter.pipe';
     BigmapComponent,
     FooterComponent,
     MarketComponent,
-<<<<<<< HEAD
     AboutComponent,
     MainmapComponent,
     CreateFarmComponent,
@@ -77,6 +71,7 @@ import { FilterPipe } from 'src/app/farmfilter.pipe';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     HttpClientModule,
+    NgbModule,
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
@@ -86,19 +81,6 @@ import { FilterPipe } from 'src/app/farmfilter.pipe';
     MatCheckboxModule
   ],
   providers: [AuthService, IssueService],
-=======
-    AboutComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    HttpClientModule
-  ],
-  providers: [AuthService],
->>>>>>> origin/master
   bootstrap: [AppComponent]
 })
 

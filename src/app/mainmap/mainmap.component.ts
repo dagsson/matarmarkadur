@@ -18,8 +18,12 @@ declare var $ : any;
 
 export class MainmapComponent implements OnInit {
 
-  displayedColumns = ['title', 'responsible', 'severity', 'status', 'actions'];
-
+  map: any;
+  results = [];
+  vestur = [];
+  nordvestur = [];
+  nordaustur = [];
+  sudur = [];
   style = 'mapbox://styles/dagsson/cj99p8osy3in82smvtx2ie7x8';
   lat = 65.100129;
   lng = -19.018391;
@@ -29,19 +33,22 @@ export class MainmapComponent implements OnInit {
     type: 'FeatureCollection',
     features: []
   };
+  model = {
+    vestur: false,
+    nordvestur: false,
+    nordaustur: false,
+    sudur: false,
+  };
+  
   
   constructor(private mapService: MapService, private issue: IssueService, private router: Router) { }
 
   ngOnInit() {
-    this.fetchFarms();
+    //this.fetchFarms();
     /*this.issue.getIssues().subscribe((issues) => {
       if (issues)
       this.farm = issues[0];
     })*/
-    this.initializeMap();
-  }
-
-  private initializeMap() {
     this.buildMap();
   }
 
@@ -54,34 +61,29 @@ export class MainmapComponent implements OnInit {
           var feature = data[i]; 
           this.featureCollection.features.push(feature);
         }
-        })
+      })
+  };
+
+  toGeoJson(array) {
+    this.featureCollection = {
+      type: 'FeatureCollection',
+      features: []
     };
-
-  editFarm(id) {
-    this.router.navigate([`/edit/${id}`]);
+    var data = array;
+    for (var i = data.length - 1; i >= 0; i--) {
+      var feature = data[i]; 
+      this.featureCollection.features.push(feature);
+    }
   }
 
-  deleteFarm(id) {
-    this.issue.deleteIssue(id).subscribe(() => {
-      this.featureCollection.features = [];
-      this.fetchFarms();
-    })
-  }
-
-  buildMap() {
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: this.style,
-      zoom: 4.90,
-      center: [this.lng, this.lat]
+  displayLayer() {
+    this.results = this.featureCollection.features.filter(farm => farm.properties.area === 'Vesturumdæmi');
+    this.toGeoJson(this.results);
+    this.map.addSource('farm', {
+      type: 'geojson',
+      data: this.featureCollection
     });
-    map.on('load', () => { 
-      map.addSource('farm', {
-        type: 'geojson',
-        data: this.featureCollection
-      });
-
-    map.addLayer({
+    this.map.addLayer({
       'id': 'Kindur',
       'type': 'circle',
       'source': 'farm',
@@ -96,6 +98,53 @@ export class MainmapComponent implements OnInit {
           'circle-color': 'rgb(84,48,5)'
         }
     });
-});
-}
+
+    var popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false
+    });
+
+    this.map.on('mouseenter', 'Kindur', (e) => {
+      this.map.getCanvas().style.cursor = 'pointer';
+      var coordinates = e.features[0].geometry.coordinates.slice();
+    
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      popup.setLngLat(coordinates)
+          .setHTML(e.features[0].properties.name)
+          .addTo(this.map);
+    });
+    
+    this.map.on('mouseleave', 'Kindur', () => {
+        this.map.getCanvas().style.cursor = '';
+        popup.remove();
+    });
+    this.fetchFarms();
+  }
+
+  editFarm(id) {
+    this.router.navigate([`/edit/${id}`]);
+  }
+
+  deleteFarm(id) {
+    this.issue.deleteIssue(id).subscribe(() => {
+      this.featureCollection.features = [];
+      this.fetchFarms();
+    })
+  }
+
+  buildMap() {
+    this.map = new mapboxgl.Map({
+      container: 'map',
+      style: this.style,
+      zoom: 4.90,
+      center: [this.lng, this.lat]
+    });
+    this.fetchFarms()
+  }
 }

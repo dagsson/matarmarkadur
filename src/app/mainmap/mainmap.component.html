@@ -1,7 +1,25 @@
 <div id='menu'>
+
   <div class="control_panel">
     <input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" id="leit" [(ngModel)]="term">
     <div class="btn-wrap"><button class="btn btn-info btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
+      <div class="btn-wrap">
+        <div class="btn-group btn-group-toggle">
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" ngbButton [(ngModel)]="model.vestur"> Vestur
+            </label>
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" ngbButton [(ngModel)]="model.nordaustur"> Norðaustur
+            </label>
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" ngbButton [(ngModel)]="model.nordvestur"> Norðvestur
+            </label>
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" ngbButton [(ngModel)]="model.sudur"> Suður
+            </label>
+        </div>
+      </div>
+    <div class="btn-wrap"><button class="btn btn-info btn-block createnew" (click)="displayLayer()">Sækja framleiðendur</button></div>
     <div *ngIf="featureCollection.features.length > 0" class="table-responsive-md">
         <table class="table table-hover">
             <thead>
@@ -12,11 +30,10 @@
               </tr>
             </thead>
             <tbody>    
-              <tr *ngFor="let item of featureCollection.features | filter:term ">
+              <tr *ngFor="let item of featureCollection.features | filter:term">
                 <td>{{item.properties.name}}</td>
                 <td>
-                  <button class="btn btn-outline-secondary inline" (click)="editFarm(item._id)">Breyta</button>
-                  
+                  <button class="btn btn-outline-secondary inline" (click)="editFarm(item._id)">Breyta</button>            
                 </td>
                 <td>
                   <button class="btn btn-outline-danger inline" (click)="deleteFarm(item._id)">Eyða</button>

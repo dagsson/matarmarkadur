@@ -18,7 +18,7 @@
   position: absolute;
   z-index: 1;
   overflow: scroll;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .control_panel {
@@ -44,4 +44,12 @@ td {
 
 td button {
   font-size: 0.8rem;
+}
+
+.filter-btns {
+  margin-bottom: 30px;
+}
+
+.btn-group-toggle {
+  text-align: center;
 }
