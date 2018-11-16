@@ -28,8 +28,8 @@
 
 .btn-wrap {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 th {
@@ -52,4 +52,19 @@ td button {
 
 .btn-group-toggle {
   text-align: center;
+}
+
+.btn-framl {
+  margin-right: 15px;
+}
+
+.more_info img {
+  height: 30px;
+  float: right;
+}
+
+.marker {
+  width: 30px;
+  height: 30px;
+  background-color: red;
 }

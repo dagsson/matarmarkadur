@@ -4,45 +4,51 @@
     <input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" id="leit" [(ngModel)]="term">
     <div class="btn-wrap"><button class="btn btn-info btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
       <div class="btn-wrap">
-        <div class="btn-group btn-group-toggle">
-            <label class="btn-primary" ngbButtonLabel>
-              <input type="checkbox" ngbButton [(ngModel)]="model.vestur"> Vestur
-            </label>
-            <label class="btn-primary" ngbButtonLabel>
-              <input type="checkbox" ngbButton [(ngModel)]="model.nordaustur"> Norðaustur
-            </label>
-            <label class="btn-primary" ngbButtonLabel>
-              <input type="checkbox" ngbButton [(ngModel)]="model.nordvestur"> Norðvestur
-            </label>
-            <label class="btn-primary" ngbButtonLabel>
-              <input type="checkbox" ngbButton [(ngModel)]="model.sudur"> Suður
-            </label>
+        <button type="button" class="btn btn-framl btn-naut btn-outline-info" (click)="displayLayerNaut()">Nautgripir</button>
+        <button type="button" class="btn btn-framl btn-kind btn-outline-info" (click)="displayLayerKind()">Sauðfé</button>
+        <button type="button" class="btn btn-framl btn-hross btn-outline-info">Hestar</button>
+        <button type="button" class="btn btn-framl btn-svin btn-outline-info" (click)="displayLayerSvin()">Svín</button>
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-framl btn-outline-primary">Fiskeldi</button>
+        <button type="button" class="btn btn-framl btn-outline-secondary">Alifuglar</button>
+        <button type="button" class="btn btn-framl btn-outline-success">Afli</button>
+        <button type="button" class="btn btn-framl btn-outline-danger">Geitur</button>
+        
+      </div>
+      <div class="btn-wrap">
+        <button type="button" class="btn btn-framl btn-outline-warning">Matjurtir</button>
+        <button type="button" class="btn btn-framl btn-outline-info">Skelfiskur</button>
+        <button type="button" class="btn btn-framl btn-outline-info">Þörungar</button>
+        <button type="button" class="btn btn-framl btn-outline-dark">Handverk</button>
+      </div>
+    </div>
+    <div *ngFor="let item of featureCollection.features | slice:0:30 | filter:term" class="accordion farm-list">
+            <div class="card">
+              <div class="card-header row" id="headingOne" (click)="flyToFarm(item)">
+                <div class="col-md 6">
+                <p class="mb-0" (click)="highlightSelectedFeature(item)">
+                    {{item.properties.name}}
+                <p>
+                </div>
+                <div class="col-md 6 more_info">
+                  <a href="#List-{{ item._id }}" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+                      <img src="../assets/img/more_info_blue.png"/>
+                  </a>
+                </div>
+              </div>       
+              <div id="List-{{ item._id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h5>{{item.properties.id}}</h5>
+                    <p>{{item.properties.product}}</p>
+                    <button class="btn btn-outline-danger">Skoða síðu</button>
+                    <button class="btn btn-outline-secondary" (click)="editFarm(item._id)">Breyta</button>
+                    <button class="btn btn-outline-danger" (click)="deleteFarm(item._id)">Eyða</button>
+                </div>
+              </div>
+            </div>
         </div>
-      </div>
-    <div class="btn-wrap"><button class="btn btn-info btn-block createnew" (click)="displayLayer()">Sækja framleiðendur</button></div>
-    <div *ngIf="featureCollection.features.length > 0" class="table-responsive-md">
-        <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Framleiðandi</th>
-                <th scope="col"></th>
-                <th scope="col"></th>                           
-              </tr>
-            </thead>
-            <tbody>    
-              <tr *ngFor="let item of featureCollection.features | filter:term">
-                <td>{{item.properties.name}}</td>
-                <td>
-                  <button class="btn btn-outline-secondary inline" (click)="editFarm(item._id)">Breyta</button>            
-                </td>
-                <td>
-                  <button class="btn btn-outline-danger inline" (click)="deleteFarm(item._id)">Eyða</button>
-                </td>
-              </tr>        
-            </tbody>
-        </table>
-      </div>
   </div>
-</div>
+
 
 <div id="map" class="map"></div>

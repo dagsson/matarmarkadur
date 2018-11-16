@@ -24,6 +24,7 @@
     "@angular/router": "^6.1.7",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "angular-bootstrap-md": "^6.2.3",
+    "angular2-virtual-scroll": "^0.4.16",
     "angularfire2": "^5.0.1",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
