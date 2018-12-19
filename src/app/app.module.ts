@@ -32,6 +32,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 import { IssueService } from './issue.service';
@@ -40,6 +41,7 @@ import { CreateFarmComponent } from './create-farm/create-farm.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { EditFarmComponent } from './edit-farm/edit-farm.component';
 import { FilterPipe } from 'src/app/farmfilter.pipe';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,8 @@ import { FilterPipe } from 'src/app/farmfilter.pipe';
     CreateFarmComponent,
     WelcomeComponent,
     EditFarmComponent,
-    FilterPipe
+    FilterPipe,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +81,8 @@ import { FilterPipe } from 'src/app/farmfilter.pipe';
     MatCardModule,
     MatTableModule,
     MatChipsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    AngularFontAwesomeModule
   ],
   providers: [AuthService, IssueService],
   bootstrap: [AppComponent]

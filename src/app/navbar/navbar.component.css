@@ -2,7 +2,6 @@
     height: 50px;
 }
 
-<<<<<<< HEAD
 .navbar-toggler {
   border-color: white !important;
 }
@@ -11,8 +10,6 @@
   text-align: center;
 }
 
-=======
->>>>>>> origin/master
 #mainNav {
     border-bottom: 1px solid rgba(33, 37, 41, 0.1);
     background-color: #fff;
@@ -56,7 +53,7 @@
     background-color: transparent;
   }
   
-  @media (min-width: 992px) {
+  @media (min-width: 1150px) {
     #mainNav {
       border-color: transparent;
       background-color: #e9ecef;
@@ -97,3 +94,9 @@
       color: #28A743;
     }
   }
+
+  @media (max-width: 1150px) {
+    .navbar-collapse {
+      background-color: white;
+    }
+  } 

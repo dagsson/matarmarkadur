@@ -3,13 +3,17 @@
     height: 100vh;
     margin-top: 35px;
     left: 33.33333333%;
-  }
+}
+
+:host >>> .mapboxgl-ctrl-attrib {
+  display: none;
+}
 
 #sheep_btn {
     z-index: 10000000;
     position: absolute;
     top: 25%;
-  }
+}
 
 #menu {
   width: 33.33333333%;
@@ -17,19 +21,141 @@
   background-color: #fbfbfb;
   position: absolute;
   z-index: 1;
-  overflow: scroll;
   padding-top: 60px;
+  box-shadow: -4px 0px 15px black;
+}
+
+.farmlist-wrap {
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+  height: 50%;
 }
 
 .control_panel {
   padding: 15px;
   font-family: source sans pro;
+  border-bottom: 5px solid #e9ecef;
 }
 
 .btn-wrap {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
+}
+
+.btn-outline-info:focus, .btn-outline-info:active, .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-danger:focus, .btn-outline-danger:active, .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-warning:focus, .btn-outline-warning:active, .btn-outline-warning:not(:disabled):not(.disabled):active {
+  box-shadow: 0 0 0 0.2rem rgba(84, 48, 5, 0.22);
+}
+
+.btn-naut {
+  color: rgb(84,48,5);
+  border-color: rgb(84,48,5);
+}
+
+.btn-naut:hover, .btn-naut:active {
+  background-color: rgb(84,48,5) !important;
+  color: white;
+}
+
+.btn-kind {
+  color: #8c510a;
+  border-color: #8c510a;
+}
+
+.btn-kind:hover, .btn-kind:active {
+  background-color: #8c510a !important;
+  color: white;
+}
+
+.btn-hross {
+  color: #A57D28;
+  border-color: #A57D28;
+}
+
+.btn-hross:hover, .btn-hross:active {
+  background-color: #A57D28 !important;
+  color: white;
+}
+
+.btn-svin {
+  color: #35978f;
+  border-color: #35978f;
+}
+
+.btn-svin:hover, .btn-svin:active {
+  background-color: #35978f !important;
+  color: white;
+}
+
+.btn-fiskeldi {
+  color: #dea613;
+  border-color: #dea613;
+}
+
+.btn-fiskeldi:hover, .btn-fiskeldi:active {
+  background-color: #dea613 !important;
+  color: white;
+}
+
+.btn-alifuglar {
+  color: #b1200f;
+  border-color: #b1200f;
+}
+
+.btn-alifuglar:hover, .btn-alifuglar:active {
+  background-color: #b1200f !important;
+  color: white;
+}
+
+.btn-afli {
+  color: #fa482e;
+  border-color: #fa482e;
+}
+
+.btn-afli:hover, .btn-afli:active {
+  background-color: #fa482e !important;
+  color: white;
+}
+
+.btn-geitur {
+  color: #f4a32e;
+  border-color: #f4a32e;
+}
+
+.btn-geitur:hover, .btn-geitur:active {
+  background-color: #f4a32e !important;
+  color: white;
+}
+
+.btn-matjurtir {
+  color: #80cdc1;
+  border-color: #80cdc1;
+}
+
+.btn-matjurtir:hover, .btn-matjurtir:active {
+  background-color: #80cdc1 !important;
+  color: white;
+}
+
+.btn-skelfiskur {
+  color: #01665e;
+  border-color: #01665e;
+}
+
+.btn-skelfiskur:hover, .btn-skelfiskur:active {
+  background-color: #01665e !important;
+  color: white;
+}
+
+.btn-thorungar {
+  color: #bf812d;
+  border-color: #bf812d;
+}
+
+.btn-thorungar:hover, .btn-thorungar:active {
+  background-color: #bf812d !important;
+  color: white;
 }
 
 th {
@@ -60,11 +186,49 @@ td button {
 
 .more_info img {
   height: 30px;
-  float: right;
 }
 
 .marker {
   width: 30px;
   height: 30px;
   background-color: red;
+}
+
+.card-header p {
+  margin-bottom: 0px;
+}
+
+.card-header fa {
+  float: right;
+  margin-right: 15px;
+  color: #48a0b6;
+}
+
+.card-body button {
+  margin-right: 15px;
+}
+
+:host >>> .mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1150px) {
+  #menu {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    padding-top: 15px;
+  }
+  #map, .map {
+    width: 100%;
+    height: 50vh;
+    left: 0;
+    margin-top: 0px;
+  }
+  .control_panel .btn-info {
+    display: none;
+  }
+  button {
+    font-size: 14px;
+  }
 }

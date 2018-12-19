@@ -1,0 +1,63 @@
+<div id="selectedFarmCard" *ngIf="(authService.user | async) && (this.selectedFarm != null)">
+    <h2><strong>{{this.selectedFarm.properties.name}}</strong></h2>
+    <p>{{this.selectedFarm.properties.place}}</p>
+    <p>{{this.selectedFarm.properties.type}}</p>
+    <p>{{this.selectedFarm.properties.product}}</p>
+    <button class="btn btn-outline-secondary" (click)="editFarm(this.selectedFarm._id)">Breyta</button>
+    <button class="btn btn-outline-danger" (click)="deleteFarm(this.selectedFarm._id)">Eyða</button>
+</div>
+<div id="newProducer" class="btn-wrap" *ngIf="(authService.user | async)"><button class="btn btn-lg btn-success btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
+
+<div id='menu'>
+  
+  <div class="control_panel">
+      <div class="controls row">
+        <div class="header-wrap col-lg-3 col-md-12">
+        <h3 class="map-header"><strong>Frumframleiðendur<br>matvæla á Íslandi</strong></h3>
+        </div>
+        <div class="search-wrap col-lg-3 col-md-12">
+          <form autocomplete="off">
+              <!--<p class="searchguide">Sláðu inn nafn framleiðanda</p>-->
+              <div class="autocomplete">
+                <input class="form-control form-control-md" id="theinput" type="text" (keyup)="onKey($event)" id="leit" placeholder="Leitaðu að framleiðanda">
+              </div>
+              <div class="farmlist-wrap" id="autocomplete">
+              <div *ngFor="let item of this.farmlist | slice:0:300 | filter:term" class="accordion farm-list" id="farmlist">
+                    <div class="card-header row" id="headingOne" (click)="flyToFarm(item)">
+                      <p (click)="highlightSelectedFeature(item)">
+                          {{item.properties.name}}
+                      <p>
+                      <!--<div class="admin-buttons">
+                        <button *ngIf="!authService.user" class="btn btn-primary btn-sm" (click)="editFarm(item._id)">Breyta</button>
+                        <button *ngIf="!authService.user" class="btn btn-danger btn-sm" (click)="deleteFarm(item._id)">Eyða</button>
+                      </div>-->
+                    </div>           
+              </div>
+              </div>
+          </form>
+        </div>
+      <!--<input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" (keyup)="onKey($event)" id="leit" [(ngModel)]="term">-->
+    
+      <!--<div *ngIf="authService.user" class="btn-wrap"><button class="btn btn-info btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>-->
+        <div class="filter-wrap col-lg-6 col-md-12">
+          <div class="btn-wrap">
+            <button type="button" [ngClass]="(this.nautToggle==true)?'naut-active':'btn-naut'" class="btn btn-framl btn-naut btn-outline-info" (click)="displayLayer('naut', 'NAUTGRIPIR', 'rgb(84,48,5)', this.naut); this.nautToggle=!this.nautToggle">Nautgripir</button>
+            <button type="button" [ngClass]="(this.kindToggle==true)?'kind-active':'btn-kind'" class="btn btn-framl btn-kind btn-outline-info" (click)="displayLayer('kindur', 'SAUÐFÉ', '#8c510a', this.kindur); this.kindToggle=!this.kindToggle">Sauðfé</button>
+            <button type="button" [ngClass]="(this.hrossToggle==true)?'hross-active':'btn-hross'" class="btn btn-framl btn-hross btn-outline-info" (click)="displayLayer('hross', 'HROSS', '#A57D28', this.hross); this.hrossToggle=!this.hrossToggle">Hestar</button>
+            <button type="button" [ngClass]="(this.svinToggle==true)?'svin-active':'btn-svin'" class="btn btn-framl btn-svin btn-outline-info" (click)="displayLayer('svin', 'SVÍN', '#35978f', this.svin); this.svinToggle=!this.svinToggle">Svín</button>
+            <button type="button" [ngClass]="(this.matjurtirToggle==true)?'matjurtir-active':'btn-matjurtir'" class="btn btn-framl btn-matjurtir btn-outline-warning" (click)="displayLayer('matjurtir', 'MATJURTARÆKT', '#80cdc1', this.matjurtir); this.matjurtirToggle=!this.matjurtirToggle">Matjurtir</button>
+            <button type="button" [ngClass]="(this.afliToggle==true)?'afli-active':'btn-afli'" class="btn btn-framl btn-afli btn-outline-success" (click)="displayLayer('afli', 'SKIP - Fiskiskip', '#fa482e', this.afli); this.afliToggle=!this.afliToggle">Afli</button>
+            <button type="button" [ngClass]="(this.fiskeldiToggle==true)?'fiskeldi-active':'btn-fiskeldi'" class="btn btn-framl btn-fiskeldi btn-outline-primary" (click)="displayLayer('fiskeldi', 'FISKELDI', '#dea613', this.fiskeldi); this.fiskeldiToggle=!this.fiskeldiToggle">Fiskeldi</button>
+            <button type="button" [ngClass]="(this.alifuglarToggle==true)?'alifuglar-active':'btn-alifuglar'" class="btn btn-framl btn-alifuglar btn-outline-secondary" (click)="displayLayer('alifuglar', 'ALIFUGLAR', '#b1200f', this.alifuglar); this.alifuglarToggle=!this.alifuglarToggle">Alifuglar</button>     
+            <button type="button" [ngClass]="(this.skelfiskurToggle==true)?'skelfiskur-active':'btn-skelfiskur'" class="btn btn-framl btn-skelfiskur btn-outline-info" (click)="displayLayer('skelfiskur', 'SKELFISKRÆKTUN', '#01665e', this.skelfiskur); this.skelfiskurToggle=!this.skelfiskurToggle">Skelfiskur</button>
+            <button type="button" [ngClass]="(this.geiturToggle==true)?'geitur-active':'btn-geitur'" class="btn btn-framl btn-geitur btn-outline-danger" (click)="displayLayer('geitur', 'GEITUR', '#f4a32e', this.geitur); this.geiturToggle=!this.geiturToggle">Geitur</button>
+            <button type="button" [ngClass]="(this.thorungarToggle==true)?'thorungar-active':'btn-thorungar'" class="btn btn-framl btn-thorungar btn-outline-info" (click)="displayLayer('thorungar', 'ÞÖRUNGAR/SJÁVARAFURÐIR', '#bf812d', this.thorungar); this.thorungarToggle=!this.thorungarToggle">Þörungar</button>
+          </div>
+        </div>
+      </div>    
+  </div>
+    
+</div>
+
+<div id="map" class="map"></div>
+

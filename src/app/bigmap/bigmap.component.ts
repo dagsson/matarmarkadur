@@ -17,7 +17,6 @@ export class BigmapComponent implements OnInit {
   style = 'mapbox://styles/dagsson/cj99p8osy3in82smvtx2ie7x8';
   lat = 65.100129;
   lng = -19.018391;
-
   showDropDown = false;
 
   // data

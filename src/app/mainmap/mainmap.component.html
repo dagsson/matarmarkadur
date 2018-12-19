@@ -1,45 +1,52 @@
 <div id='menu'>
 
   <div class="control_panel">
-    <input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" id="leit" [(ngModel)]="term">
+      <form autocomplete="off">
+          <div class="autocomplete">
+            <input class="form-control form-control-md" id="theinput" type="text" (keyup)="onKey($event)" id="leit" placeholder="Frumframleiðandi">
+          </div>
+      </form>
+    <!--<input class="form-control form-control-md" type="text" placeholder="Leitaðu eftir nafni" (keyup)="onKey($event)" id="leit" [(ngModel)]="term">-->
+  
     <div class="btn-wrap"><button class="btn btn-info btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
       <div class="btn-wrap">
-        <button type="button" class="btn btn-framl btn-naut btn-outline-info" (click)="displayLayerNaut()">Nautgripir</button>
-        <button type="button" class="btn btn-framl btn-kind btn-outline-info" (click)="displayLayerKind()">Sauðfé</button>
-        <button type="button" class="btn btn-framl btn-hross btn-outline-info">Hestar</button>
-        <button type="button" class="btn btn-framl btn-svin btn-outline-info" (click)="displayLayerSvin()">Svín</button>
+        <button type="button" [className]="this.display === true ? 'btn btn-framl btn-naut btn-outline-info btn-naut:active' : 'btn btn-framl btn-naut btn-outline-info'" class="btn btn-framl btn-naut btn-outline-info" (click)="displayLayer('naut', 'NAUTGRIPIR', 'rgb(84,48,5)', this.naut); this.display = !this.display">Nautgripir</button>
+        <button type="button" class="btn btn-framl btn-kind btn-outline-info" (click)="displayLayer('kindur', 'SAUÐFÉ', '#8c510a', this.kindur); this.display = !this.display">Sauðfé</button>
+        <button type="button" class="btn btn-framl btn-hross btn-outline-info" (click)="displayLayer('hross', 'HROSS', '#A57D28', this.hross)">Hestar</button>
+        <button type="button" class="btn btn-framl btn-svin btn-outline-info" (click)="displayLayer('svin', 'SVÍN', '#35978f', this.svin)">Svín</button>
       </div>
       <div class="btn-wrap">
-        <button type="button" class="btn btn-framl btn-outline-primary">Fiskeldi</button>
-        <button type="button" class="btn btn-framl btn-outline-secondary">Alifuglar</button>
-        <button type="button" class="btn btn-framl btn-outline-success">Afli</button>
-        <button type="button" class="btn btn-framl btn-outline-danger">Geitur</button>
+        <button type="button" class="btn btn-framl btn-fiskeldi btn-outline-primary" (click)="displayLayer('fiskeldi', 'FISKELDI', '#dea613', this.fiskeldi)">Fiskeldi</button>
+        <button type="button" class="btn btn-framl btn-alifuglar btn-outline-secondary" (click)="displayLayer('alifuglar', 'ALIFUGLAR', '#b1200f', this.alifuglar)">Alifuglar</button>
+        <button type="button" class="btn btn-framl btn-afli btn-outline-success" (click)="displayLayer('afli', 'SKIP - Fiskiskip', '#fa482e', this.afli)">Afli</button>
+        <button type="button" class="btn btn-framl btn-geitur btn-outline-danger" (click)="displayLayer('geitur', 'GEITUR', '#f4a32e', this.geitur)">Geitur</button>
         
       </div>
       <div class="btn-wrap">
-        <button type="button" class="btn btn-framl btn-outline-warning">Matjurtir</button>
-        <button type="button" class="btn btn-framl btn-outline-info">Skelfiskur</button>
-        <button type="button" class="btn btn-framl btn-outline-info">Þörungar</button>
-        <button type="button" class="btn btn-framl btn-outline-dark">Handverk</button>
+        <button type="button" *ngIf="this.toggle" class="btn btn-framl btn-matjurtir btn-outline-warning" (click)="displayLayer('matjurtir', 'MATJURTARÆKT', '#80cdc1', this.matjurtir)">Matjurtir</button>
+        <button type="button" class="btn btn-framl btn-skelfiskur btn-outline-info" (click)="displayLayer('skelfiskur', 'SKELFISKRÆKTUN', '#01665e', this.skelfiskur)">Skelfiskur</button>
+        <button type="button" class="btn btn-framl btn-thorungar btn-outline-info" (click)="displayLayer('thorungar', 'ÞÖRUNGAR/SJÁVARAFURÐIR', '#bf812d', this.thorungar)">Þörungar</button>
+        <!--<button type="button" class="btn btn-framl btn-outline-dark">Handverk</button>-->
       </div>
     </div>
-    <div *ngFor="let item of featureCollection.features | slice:0:30 | filter:term" class="accordion farm-list">
+    <div class="farmlist-wrap">
+      <div *ngFor="let item of this.farmlist | slice:0:300 | filter:term" class="accordion farm-list">
             <div class="card">
               <div class="card-header row" id="headingOne" (click)="flyToFarm(item)">
                 <div class="col-md 6">
-                <p class="mb-0" (click)="highlightSelectedFeature(item)">
+                <p (click)="highlightSelectedFeature(item)">
                     {{item.properties.name}}
                 <p>
                 </div>
                 <div class="col-md 6 more_info">
                   <a href="#List-{{ item._id }}" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-                      <img src="../assets/img/more_info_blue.png"/>
+                    <fa name="chevron-circle-down"></fa>
                   </a>
                 </div>
               </div>       
               <div id="List-{{ item._id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <h5>{{item.properties.id}}</h5>
+                    <h5>{{item.properties.place}}</h5>
                     <p>{{item.properties.product}}</p>
                     <button class="btn btn-outline-danger">Skoða síðu</button>
                     <button class="btn btn-outline-secondary" (click)="editFarm(item._id)">Breyta</button>
@@ -47,8 +54,8 @@
                 </div>
               </div>
             </div>
-        </div>
+      </div>
+    </div>
   </div>
-
 
 <div id="map" class="map"></div>
