@@ -35,6 +35,7 @@ export class MapComponent implements OnInit {
   skelfiskur = [];
   farmlist = [];
   producers;
+  listId: any;
   selectedFarm = null;
   display = false;
   nautToggle = false;
@@ -105,10 +106,55 @@ export class MapComponent implements OnInit {
     });
   }
 
+  flyToFarm(currentFeature) {
+    if (currentFeature) {
+    this.map.flyTo({
+      center: currentFeature.geometry.coordinates,
+      zoom: 8
+    });
+    this.selectedFarm = currentFeature;
+    document.getElementById('autocomplete').style.display = 'none';
+    this.highlightSelectedFeature(currentFeature);
+    if (this.authService.user) {
+      document.getElementById('selectedFarmCard').style.left = '0px';
+    }
+  } else {
+    console.log("Enginn framleiðandi með þessu nafni");
+  }
+  }
+
+  highlightSelectedFeature(e) {
+    this.listToLayer(e.properties.type);
+    console.log(this.listId);
+    if (this.map.getLayer(this.listId)) {
+    var layerColor = this.map.getLayer(this.listId)._transitionablePaint._values["circle-color"].value.value;
+    console.log(layerColor + " WTF!!!!");
+    var popUps = document.getElementsByClassName('mapboxgl-popup');
+    if (popUps[0]) popUps[0].remove();
+    var popup = new mapboxgl.Popup({ closeOnClick: false })
+      .setLngLat(e.geometry.coordinates)
+      .setHTML('<h4 class="selected" style="background:' + layerColor + ';">' + e.properties.type + '</h4>' +
+        '<h4>' + e.properties.name + '</h4>')
+      .addTo(this.map);
+    } else {
+      var popUps = document.getElementsByClassName('mapboxgl-popup');
+      if (popUps[0]) popUps[0].remove();
+      var popup = new mapboxgl.Popup({ closeOnClick: false })
+        .setLngLat(e.geometry.coordinates)
+        .setHTML('<h4 class="selected" style="background: green;">' + e.properties.type + '</h4>' +
+          '<h4>' + e.properties.name + '</h4>')
+        .addTo(this.map);
+      }
+   };
+
   search($event) {
     let q = $event.target.value;
     var man = this.featureCollection.features.filter(farm => farm.properties.name === q);
     console.log(man);
+  }
+
+  closeCard() {
+    document.getElementById('selectedFarmCard').style.left = '-460px';
   }
 
   fetchFarms() {
@@ -135,31 +181,59 @@ export class MapComponent implements OnInit {
     }
   }
 
-  flyToFarm(currentFeature) {
-    if (currentFeature) {
-    this.map.flyTo({
-      center: currentFeature.geometry.coordinates,
-      zoom: 8
-    });
-    this.highlightSelectedFeature(currentFeature);
-    this.selectedFarm = currentFeature;
-    document.getElementById('autocomplete').style.display = 'none';
-    document.getElementById('selectedFarmCard').style.display = 'block';
-  } else {
-    console.log("Enginn framleiðandi með þessu nafni");
-  }
+  layerToList(id) {
+    if (id == 'naut') {
+      id = 'NAUTGRIPIR';
+    } else if (id == 'kindur') {
+      id = 'SAUÐFÉ';
+    } else if (id == 'hross') {
+      id = 'HROSS';
+    } else if (id == 'svin') {
+      id = 'SVÍN';
+    } else if (id == 'matjurtir') {
+      id = 'MATJURTARÆKT';
+    } else if (id == 'afli') {
+      id = 'SKIP - Fiskiskip';
+    } else if (id == 'fiskeldi') {
+      id = 'FISKELDI';
+    } else if (id == 'alifuglar') {
+      id = 'ALIFUGLAR';
+    } else if (id == 'skelfiskur') {
+      id = 'SKELFISKRÆKTUN';
+    } else if (id == 'thorungar') {
+      id = 'ÞÖRUNGAR/SJÁVARAFURÐIR';
+    } else if (id == 'geitur') {
+      id = 'GEITUR';
+    }
+    this.listId = id;
   }
 
-  highlightSelectedFeature(e) {
-   this.map.getLayer(e.properties)
-   var popUps = document.getElementsByClassName('mapboxgl-popup');
-   if (popUps[0]) popUps[0].remove();
-   var popup = new mapboxgl.Popup({ closeOnClick: false })
-     .setLngLat(e.geometry.coordinates)
-     .setHTML('<h4 class="highlight-popup">' + e.properties.type + '</h4>' +
-       '<h4>' + e.properties.name + '</h4>')
-     .addTo(this.map);
-  };
+  listToLayer(id) {
+    if (id == 'NAUTGRIPIR') {
+      id = 'naut';
+    } else if (id == 'SAUÐFÉ') {
+      id = 'kindur';
+    } else if (id == 'HROSS') {
+      id = 'hross';
+    } else if (id == 'SVÍN') {
+      id = 'svin';
+    } else if (id == 'MATJURTARÆKT') {
+      id = 'matjurtir';
+    } else if (id == 'SKIP - Fiskiskip') {
+      id = 'afli';
+    } else if (id == 'FISKELDI') {
+      id = 'fiskeldi';
+    } else if (id == 'ALIFUGLAR') {
+      id = 'alifuglar';
+    } else if (id == 'SKELFISKRÆKTUN') {
+      id = 'skelfiskur';
+    } else if (id == 'ÞÖRUNGAR/SJÁVARAFURÐIR') {
+      id = 'thorungar';
+    } else if (id == 'GEITUR') {
+      id = 'geitur';
+    }
+    this.listId = id;
+  }
 
   displayLayer(id, type, color, array) {
   if (typeof this.map.getLayer(id) == 'undefined') {
@@ -185,13 +259,6 @@ export class MapComponent implements OnInit {
             'stops': [[3, 3], [16, 32]]
         },
         'circle-color': color
-      },
-    'properties': {
-        'icon': {
-          'className': 'my-icon icon-sf', // class name to style
-          'html': '&#9733;', // add content inside the marker, in this case a star
-          'iconSize': null // size of icon, use null to set the size in CSS
-        }
       }
   });
 

@@ -1,8 +1,9 @@
-<div id="selectedFarmCard" *ngIf="(authService.user | async) && (this.selectedFarm != null)">
-    <h2><strong>{{this.selectedFarm.properties.name}}</strong></h2>
-    <p>{{this.selectedFarm.properties.place}}</p>
-    <p>{{this.selectedFarm.properties.type}}</p>
-    <p>{{this.selectedFarm.properties.product}}</p>
+<div id="selectedFarmCard" *ngIf="(authService.user | async)">
+    <fa class="closeIcon" name="times" (click)="closeCard()"></fa>
+    <h2 *ngIf="(this.selectedFarm)"><strong>{{this.selectedFarm.properties.name}}</strong></h2>
+    <p></p>
+    <p></p>
+    <p></p>
     <button class="btn btn-outline-secondary" (click)="editFarm(this.selectedFarm._id)">Breyta</button>
     <button class="btn btn-outline-danger" (click)="deleteFarm(this.selectedFarm._id)">Eyða</button>
 </div>

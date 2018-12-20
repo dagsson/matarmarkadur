@@ -23,10 +23,10 @@ form {
 }
 
 #newProducer {
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  bottom: 50px;
-  left: 50px;
+  top: 220px;
+  right: 50px;
   box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
 }
 
@@ -39,27 +39,30 @@ form {
   box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
 }
 
-:host >>> .highlight-popup {
-  background-color: #246533;
-  color: white;
-}
-
 .bottom-right {
   margin-bottom: 100px;
 }
 
 #selectedFarmCard {
+  left: -460px;
+  height: 100%;
   width: 450px;
-  display: none;
   padding: 50px;
+  padding-top: 300px;
+  transition: .3s;
   background-color: #fbfbfb;
   box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
-  left: 50px;
   text-align: center;
-  margin-bottom: 15px;
   position: absolute;
-  z-index: 2;
-  bottom: 150px;
+  z-index: 1;
+}
+
+.closeIcon {
+  font-size: 24px;
+  float: right;
+  margin-top: -56px;
+  color: gray;
+  cursor: pointer;
 }
 
 #selectedFarmCard button {
@@ -378,6 +381,7 @@ td button {
     padding: 0;
     width: 180px;
     text-align: center;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.15), 0 25px 80px rgba(0,0,0,0.1);
 }
   
 :host >>> .mapboxgl-popup-content-wrapper {
@@ -385,7 +389,7 @@ td button {
 }
   
 :host >>> .mapboxgl-popup-content h3 {
-    color: #fff;
+    color: #fff !important;
     margin: 0;
     display: block;
     padding: 10px;
@@ -401,6 +405,10 @@ td button {
     padding: 10px;
     font-weight: 400;
     font-size: 15px;
+}
+
+:host >>> .selected {
+  color: white !important;
 }
   
 :host >>> .mapboxgl-popup-content div {
