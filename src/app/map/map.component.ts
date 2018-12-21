@@ -35,6 +35,7 @@ export class MapComponent implements OnInit {
   skelfiskur = [];
   farmlist = [];
   producers;
+  prodId: any;
   listId: any;
   selectedFarm = null;
   display = false;
@@ -89,12 +90,13 @@ export class MapComponent implements OnInit {
     }
     if ($event.keyCode==13) {
       if (this.farmlist[0]) {
+      this.prodId = this.farmlist[0]._id;
       document.getElementById('autocomplete').style.display = 'none';
       this.display = false;
       this.flyToFarm(this.farmlist[0]);
       (<HTMLInputElement>document.getElementById('leit')).value = this.farmlist[0].properties.name;
     } else {
-      console.log("Engin framleiðandi með þessu nafni");
+      console.log("Enginn framleiðandi með þessu nafni");
     }
     }
     
@@ -125,13 +127,11 @@ export class MapComponent implements OnInit {
 
   highlightSelectedFeature(e) {
     this.listToLayer(e.properties.type);
-    console.log(this.listId);
     if (this.map.getLayer(this.listId)) {
     var layerColor = this.map.getLayer(this.listId)._transitionablePaint._values["circle-color"].value.value;
-    console.log(layerColor + " WTF!!!!");
     var popUps = document.getElementsByClassName('mapboxgl-popup');
     if (popUps[0]) popUps[0].remove();
-    var popup = new mapboxgl.Popup({ closeOnClick: false })
+    var popup = new mapboxgl.Popup({ closeOnClick: true })
       .setLngLat(e.geometry.coordinates)
       .setHTML('<h4 class="selected" style="background:' + layerColor + ';">' + e.properties.type + '</h4>' +
         '<h4>' + e.properties.name + '</h4>')
@@ -139,19 +139,13 @@ export class MapComponent implements OnInit {
     } else {
       var popUps = document.getElementsByClassName('mapboxgl-popup');
       if (popUps[0]) popUps[0].remove();
-      var popup = new mapboxgl.Popup({ closeOnClick: false })
+      var popup = new mapboxgl.Popup({ closeOnClick: true })
         .setLngLat(e.geometry.coordinates)
         .setHTML('<h4 class="selected" style="background: green;">' + e.properties.type + '</h4>' +
           '<h4>' + e.properties.name + '</h4>')
         .addTo(this.map);
       }
    };
-
-  search($event) {
-    let q = $event.target.value;
-    var man = this.featureCollection.features.filter(farm => farm.properties.name === q);
-    console.log(man);
-  }
 
   closeCard() {
     document.getElementById('selectedFarmCard').style.left = '-460px';
@@ -179,6 +173,11 @@ export class MapComponent implements OnInit {
       var feature = data[i]; 
       this.featureCollection.features.push(feature);
     }
+  }
+
+  findId(prodId) {
+    var id = this.featureCollection.features.filter(prod => prod.properties.id === prodId);
+    this.prodId = id[0]._id;
   }
 
   layerToList(id) {
@@ -284,20 +283,19 @@ export class MapComponent implements OnInit {
   });
 
   this.map.on('click', id, (e) => {
+    var prodId = e.features[0].properties.id;
+    this.findId(prodId);
     var clickedPoint = e.features[0];
     this.flyToFarm(clickedPoint);
     this.selectedFarm = e.features[0];
   });
-
   this.farmlist = array;
-  console.log(this.farmlist);
   }
   else { 
     var visibility = this.map.getLayoutProperty(id, 'visibility');
     if (visibility === 'none') {       
         this.map.setLayoutProperty(id, 'visibility', 'visible');
         this.farmlist = array;
-        console.log(this.farmlist);
     } else {   
         this.map.setLayoutProperty(id, 'visibility', 'none');
         this.farmlist = []; 

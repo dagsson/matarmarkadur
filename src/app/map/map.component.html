@@ -1,13 +1,13 @@
 <div id="selectedFarmCard" *ngIf="(authService.user | async)">
     <fa class="closeIcon" name="times" (click)="closeCard()"></fa>
-    <h2 *ngIf="(this.selectedFarm)"><strong>{{this.selectedFarm.properties.name}}</strong></h2>
+    <h3 *ngIf="(this.selectedFarm)"><strong>{{this.selectedFarm.properties.name}}</strong></h3>
+    <h4>{{this.selectedFarm.properties.id}}</h4>
+    <p>{{this.selectedFarm.properties.product}}</p>
     <p></p>
-    <p></p>
-    <p></p>
-    <button class="btn btn-outline-secondary" (click)="editFarm(this.selectedFarm._id)">Breyta</button>
-    <button class="btn btn-outline-danger" (click)="deleteFarm(this.selectedFarm._id)">Eyða</button>
+    <button class="btn btn-outline-secondary" (click)="editFarm(this.prodId)">Breyta</button>
+    <button class="btn btn-outline-danger" (click)="deleteFarm(this.prodId)">Eyða</button>
 </div>
-<div id="newProducer" class="btn-wrap" *ngIf="(authService.user | async)"><button class="btn btn-lg btn-success btn-block createnew" routerLink="/create">Stofna nýjan framleiðanda</button></div>
+<div id="newProducer" class="btn-wrap" *ngIf="(authService.user | async)"><button class="btn btn-lg btn-primary btn-block createnew" routerLink="/create"><fa class="plus" name="plus-circle"></fa>Nýr framleiðandi</button></div>
 
 <div id='menu'>
   

@@ -19,9 +19,6 @@
             <a routerLink="/login" class="nav-link">Innskráning</a>
           </li>
           <li class="nav-item" *ngIf="authService.user | async">
-              <a routerLink="/mainmap" class="nav-link">Vinnusvæði</a>
-          </li>
-          <li class="nav-item" *ngIf="authService.user | async">
               <a (click)="logout()" class="nav-link">Útskráning</a>
             </li>
           

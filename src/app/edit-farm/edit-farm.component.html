@@ -6,9 +6,6 @@
             <h3>{{this.issue.properties.name}} | {{this.issue.properties.id}}</h3><br>
             <h5>Upplýsingar</h5>
         </div>
-        <div class="col-md-6">
-            <button class="btn btn-info" routerLink="/mainmap">Til baka</button>
-        </div>
       </div>
       <br>
       <form [formGroup]="updateForm" class="create-form form-group">
@@ -164,7 +161,7 @@
         </div>
         </div>         
         <br><br>
-        <button class="btn btn-info" routerLink="/mainmap">Hætta við</button>
+        <button class="btn btn-info" routerLink="/matarlandslag">Hætta við</button>
         <button class="btn btn-primary" type="submit" (click)="updateFarm(updateForm.value)">Uppfæra framleiðanda</button>
         
       </form>
